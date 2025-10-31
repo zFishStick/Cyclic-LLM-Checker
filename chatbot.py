@@ -7,17 +7,6 @@ from openai import OpenAI
 
 load_dotenv() 
 
-# DEEPSEEK_KEY = os.getenv("DEEPSEEK_API_KEY")
-# OPENAI_KEY = os.getenv("OPENAI_API_KEY")
-
-# if not DEEPSEEK_KEY:
-#     raise ValueError("DEEPSEEK_API_KEY environment variable is not set.")
-
-# deepseek_client = OpenAI(
-#     api_key=DEEPSEEK_KEY,
-#     base_url="https://api.deepseek.com"
-# )
-
 # Gemini API
 client = genai.Client()
 
