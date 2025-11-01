@@ -1,2 +1,0 @@
-import kagglehub
-from kagglehub import KaggleDatasetAdapter
