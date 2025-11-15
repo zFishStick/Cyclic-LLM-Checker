@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 kaggle.json
 local_datasets/
+sample_dataset.csv
 
 # C extensions
 *.so
