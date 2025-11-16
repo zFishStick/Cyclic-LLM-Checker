@@ -18,6 +18,16 @@ pip install -r requirements.txt
 
 To run the notebooks, you can use VSCode with the [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) extension installed.
 
+## 👥 Team management
+- Gabriel Pesce
+    - Repository manager
+    - Notebooks developer (Analysis, Preprocessing and Introductory)
+- Tidiane Bengriche
+    - Notebooks developer (Analysis, Preprocessing)
+- Małgorzata Gierdewicz
+    - Methodology tester
+    - Methodology evaluator
+
 ## 📚 Methodology proposed
 The methodology proposed is a cyclic verification between two LLMs: Gemini and DeepSeek. The process is as follows:
 1. The user provides an input to Gemini.
