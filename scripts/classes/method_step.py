@@ -1,5 +1,5 @@
 
-class step:
+class Step:
     def __init__(self):
         self.step_num = 0
         self.step_evaluation = False
