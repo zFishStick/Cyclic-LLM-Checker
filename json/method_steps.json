@@ -1,0 +1,13 @@
+{
+    "name": "Test Chatbot",
+    "steps": [
+        {
+            "step": 1,
+            "evaluation": "True"
+        },
+        {
+            "step": 2,
+            "evaluation": "False"
+        }
+    ]
+}

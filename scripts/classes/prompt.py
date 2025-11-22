@@ -1,14 +1,14 @@
 
-import scripts.classes.news as news
+from classes.news import News
 
 class Prompt:
-    def __init__(self):
+    def __init__(self, input: str = "", context: str = "", bot_output: str = ""):
         self.input = ""
         self.context = ""
         self.bot_output = ""
 
 class Dataset1Prompt(Prompt):
-    def __init__(self, news: news.news):
+    def __init__(self, news: News):
         super().__init__()
         self.input = (
             f"I read this news: '{news.title}'. "
@@ -17,7 +17,7 @@ class Dataset1Prompt(Prompt):
         )
 
 class Dataset2Prompt(Prompt):
-    def __init__(self, news: news.news):
+    def __init__(self, news: News):
         super().__init__()
         self.input = (
             f"I read this news: '{news.title}'. "
@@ -26,7 +26,7 @@ class Dataset2Prompt(Prompt):
         )
         
         
-def check_prompt_type(news: news.news) -> Prompt:
+def check_prompt_type(news: News) -> Prompt:
     if news.url:
         return Dataset2Prompt(news)
     elif news.text:
