@@ -1,0 +1,59 @@
+
+from classes.method_step import Step
+from classes.prompt import Prompt
+
+import os
+import json as js
+
+def write_json_to_file(step: Step, prompt: Prompt) -> None:
+    json_dir = "json"
+    json_path = os.path.join(json_dir, "method_steps.json")
+
+    if not os.path.exists(json_dir):
+        os.makedirs(json_dir)
+        
+    if os.path.exists(json_path):
+        with open(json_path, "r") as f:
+            try:
+                content = f.read()
+                if not content.strip():
+                    with open(json_path, "w") as f:
+                        f.write("[]")
+            except js.JSONDecodeError:
+                with open(json_path, "w") as f:
+                    f.write("[]")
+
+    if not os.path.exists(json_path):
+        with open(json_path, "w") as f:
+            f.write("[]")
+
+    # Carica l'intero file come lista di notizie
+    with open(json_path, "r") as f:
+        try:
+            data = js.load(f)
+        except js.JSONDecodeError:
+            data = []
+
+    existing_entry = next((item for item in data if item["News title"] == prompt.news.title), None)
+
+    method_step = {
+        "chatbot_name": step.chatbot_name,
+        "step_num": step.step_num,
+        "step_evaluation": step.step_evaluation,
+        "bot_output": prompt.bot_output_text
+    }
+
+    if existing_entry:
+        existing_entry["Steps"].append(method_step)
+    else:
+        new_entry = {
+            "News title": prompt.news.title,
+            "Steps": [method_step]
+        }
+        data.append(new_entry)
+
+    with open(json_path, "w") as f:
+        js.dump(data, f, indent=4)
+
+
+        
