@@ -25,11 +25,10 @@ def main():
     prompt = Dataset1Prompt(news_instance)
     
     method_checker = mc.MethodChecker()
-    is_true, response_text = method_checker.ask_to_bot(gemini, prompt)
+    out = method_checker.ask_to_bot(gemini, prompt)
     
-    print(f"Gemini response indicates the news is {'True' if is_true else 'Fake'}")
-    print(f"Response text: {response_text}")
-    
+    print(f"Gemini response indicates the news is {'True' if out[0] else 'Fake'}")
+    print(f"Response text: {out[1]}")
     
     
 

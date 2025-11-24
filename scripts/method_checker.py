@@ -5,6 +5,7 @@ import os
 from google import genai
 from google.genai import types
 from typing import Tuple
+import json_writer as jw
 
 # Retrieve API key from environment variable
 geminiClient = genai.Client(api_key=os.environ.get('GEMINI_API_KEY'))
@@ -16,17 +17,26 @@ deepSeekClient = OpenAI(api_key=os.environ.get('DEEPSEEK_API_KEY'), base_url="ht
 
 class MethodChecker:
     def ask_to_bot(self, chatbot: cl.Chatbot, prompt : cl.Prompt) -> Tuple[bool, str]:
-        response = ""
         step = cl.Step()
+        out = (False, "")
         
-        # while not step.step_evaluation:
+        #while not step.step_evaluation and step.step_num < 2:
         match chatbot.name:
             case "Gemini":
-                step.step_evaluation, response = self.__ask_gemini(prompt)
+                step.chatbot_name = "Gemini"
+                out = self.__ask_gemini(prompt)
+                jw.write_json_to_file(step, prompt)
+                
             case "Deepseek":
-                step.step_evaluation, response = self.__ask_deepseek(prompt)
-        
-        return (step.step_evaluation, response)
+                step.chatbot_name = "Deepseek"
+                out = self.__ask_deepseek(prompt)
+                jw.write_json_to_file(step, prompt)
+            
+        step.next_step()
+        step.evaluate_step(prompt.bot_output_text is not None)
+            
+                
+        return out
     
     def __ask_gemini(self, prompt: cl.Prompt) -> Tuple[bool, str]:
         print("Asking Gemini...")
@@ -41,7 +51,10 @@ class MethodChecker:
         if response.text is None:
             raise ValueError("No response from Gemini.")
         
-        return (self.__evaluate_response(response.text), response.text)
+        prompt.bot_output_text = response.text
+        prompt.bot_evaluation = self.__evaluate_response(response.text)
+        
+        return (prompt.bot_evaluation, response.text)
 
 
     def __ask_deepseek(self, prompt: cl.Prompt) -> Tuple[bool, str]:
@@ -68,4 +81,4 @@ class MethodChecker:
         if text.startswith("false") or text.startswith("fake"):
             return False
         
-        raise ValueError("Response could not be evaluated as True or Fake.")
+        raise ValueError("Response could not be evaluated as True or Fake. Response: " + response)

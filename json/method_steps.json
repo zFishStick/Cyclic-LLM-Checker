@@ -1,13 +1,10 @@
 {
-    "name": "Test Chatbot",
-    "steps": [
+    "Banana Peel In Tree Causes Freak Out On Ole Miss Campus: \u2018Hurt, frightened, and upset\u2019": [
         {
-            "step": 1,
-            "evaluation": "True"
-        },
-        {
-            "step": 2,
-            "evaluation": "False"
+            "chatbot_name": "Gemini",
+            "step_num": 0,
+            "step_evaluation": false,
+            "bot_output": "True.\n\nA banana peel was indeed found in a tree at the University of Mississippi (Ole Miss) in February 2018, leading to significant campus discussions and affecting a Greek Life retreat. While the student who placed it there claimed it was accidental (he couldn't find a trash can), many students, particularly students of color, interpreted it as a racially insensitive act due to the historical use of banana peels as a racist symbol. The incident, and the student reactions to it, were widely reported by various news outlets. The description you provided accurately reflects the core events, although its tone is dismissive of the students' concerns."
         }
     ]
 }

@@ -10,7 +10,7 @@ def push_to_repo(df, repo_path, name):
     subprocess.run(["git", "push"], cwd=repo_path)
     
 def get_first_dataset() -> pd.DataFrame:
-    url = 'https://raw.githubusercontent.com/zFishStick/LLM-Checker-dataset/refs/heads/main/cleaned_ds/FakeDetectionNews.csv'
+    url = 'https://media.githubusercontent.com/media/zFishStick/LLM-Checker-dataset/refs/heads/main/cleaned_ds/FakeDetectionNews.csv'
     df = pd.read_csv(url, sep=',')
     return df
 
