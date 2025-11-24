@@ -1,5 +1,3 @@
-import json as js
-import os
 
 from classes.method_step import Step
 from classes.prompt import Prompt
@@ -13,35 +11,49 @@ def write_json_to_file(step: Step, prompt: Prompt) -> None:
 
     if not os.path.exists(json_dir):
         os.makedirs(json_dir)
+        
+    if os.path.exists(json_path):
+        with open(json_path, "r") as f:
+            try:
+                content = f.read()
+                if not content.strip():
+                    with open(json_path, "w") as f:
+                        f.write("[]")
+            except js.JSONDecodeError:
+                with open(json_path, "w") as f:
+                    f.write("[]")
 
-    if not os.path.exists(json_path) or os.path.getsize(json_path) == 0:
+    if not os.path.exists(json_path):
         with open(json_path, "w") as f:
-            f.write("{}")
+            f.write("[]")
 
+    # Carica l'intero file come lista di notizie
     with open(json_path, "r") as f:
         try:
             data = js.load(f)
         except js.JSONDecodeError:
-            data = {}
+            data = []
+
+    existing_entry = next((item for item in data if item["News title"] == prompt.news.title), None)
 
     method_step = {
-        "News title": prompt.news.title,
         "chatbot_name": step.chatbot_name,
         "step_num": step.step_num,
         "step_evaluation": step.step_evaluation,
         "bot_output": prompt.bot_output_text
     }
-    
-    key = prompt.news.title
 
-    if key in data:
-        if not isinstance(data[key], list):
-            data[key] = [data[key]]
-        data[key].append(method_step)
+    if existing_entry:
+        existing_entry["Steps"].append(method_step)
     else:
-        data[key] = [method_step]
+        new_entry = {
+            "News title": prompt.news.title,
+            "Steps": [method_step]
+        }
+        data.append(new_entry)
 
     with open(json_path, "w") as f:
         js.dump(data, f, indent=4)
+
 
         

@@ -1,10 +1,41 @@
-{
-    "Banana Peel In Tree Causes Freak Out On Ole Miss Campus: \u2018Hurt, frightened, and upset\u2019": [
-        {
-            "chatbot_name": "Gemini",
-            "step_num": 0,
-            "step_evaluation": false,
-            "bot_output": "True.\n\nA banana peel was indeed found in a tree at the University of Mississippi (Ole Miss) in February 2018, leading to significant campus discussions and affecting a Greek Life retreat. While the student who placed it there claimed it was accidental (he couldn't find a trash can), many students, particularly students of color, interpreted it as a racially insensitive act due to the historical use of banana peels as a racist symbol. The incident, and the student reactions to it, were widely reported by various news outlets. The description you provided accurately reflects the core events, although its tone is dismissive of the students' concerns."
-        }
-    ]
-}
+[
+    {
+        "News title": "German parties regroup for last-ditch coalition push",
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation": true,
+                "bot_output": "True.\n\nThis article accurately describes the real political situation in Germany following the 2017 federal election, specifically the difficult \"Jamaica coalition\" talks between Angela Merkel's conservatives (CDU/CSU), the Free Democratic Party (FDP), and the Greens over climate and immigration policy. These talks ultimately failed."
+            }
+        ]
+    },
+    {
+        "News title": " Trump Finally Booted A Certain White Supremacist From The National Security Council",
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation": false,
+                "bot_output": "True.\n\nThe article states that Steve Bannon was removed from the National Security Council (NSC) in April 2017, referencing tweets from reporter Jennifer Jacobs. While his security clearance was not stripped, his formal role on the council was ended, which aligns with being \"booted\" from that specific body. The article also explicitly refers to Bannon as a \"prominent white supremacist media guy\" and \"white nationalist.\""
+            }
+        ]
+    },
+    {
+        "News title": " Racism Wins The Day As S.C. Prepares To Vote For Trump",
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation": false,
+                "bot_output": "Fake.\n\nWhile Donald Trump did win the South Carolina Republican primary in 2016 (as the article predicted), the headline \"Racism Wins The Day As S.C. Prepares To Vote For Trump\" presents a highly opinionated interpretation of voter motivation as an undisputed factual statement. Voter motivations are complex and multi-faceted, and attributing Trump's victory solely or primarily to racism is an editorial conclusion, not a universally accepted, verifiable fact."
+            },
+            {
+                "chatbot_name": "",
+                "step_num": 0,
+                "step_evaluation": false,
+                "bot_output": "Fake. The headline and description present subjective political commentary as factual news, using inflammatory language and broad generalizations about voters' motivations. While Donald Trump did win the 2016 South Carolina Republican primary, attributing his victory solely to racism oversimplifies complex voter behavior and represents an opinion rather than an established fact."
+            }
+        ]
+    }
+]

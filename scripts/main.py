@@ -1,14 +1,10 @@
 
-from classes.chatbot import Chatbot
 from classes.news import News
 from classes.prompt import Dataset1Prompt, Dataset2Prompt
 import method_checker as mc
 import datasets_manager as dm
 
-def main():
-    gemini = Chatbot(name="Gemini")
-    deepseek = Chatbot(name="Deepseek")
-    
+def main():    
     news = dm.get_random_entry_from_first_dataset()
     
     news_instance = News(
@@ -25,12 +21,8 @@ def main():
     prompt = Dataset1Prompt(news_instance)
     
     method_checker = mc.MethodChecker()
-    out = method_checker.ask_to_bot(gemini, prompt)
-    
-    print(f"Gemini response indicates the news is {'True' if out[0] else 'Fake'}")
-    print(f"Response text: {out[1]}")
-    
-    
+    method_checker.start_method(prompt)
+        
 
 if __name__ == "__main__":
     main()

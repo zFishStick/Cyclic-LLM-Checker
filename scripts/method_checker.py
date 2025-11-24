@@ -1,84 +1,47 @@
 
 import classes as cl
 
-import os
-from google import genai
-from google.genai import types
 from typing import Tuple
 import json_writer as jw
 
-# Retrieve API key from environment variable
-geminiClient = genai.Client(api_key=os.environ.get('GEMINI_API_KEY'))
+from classes.chatbot.gemini import Gemini
+from classes.chatbot.deepseek import Deepseek
 
-import os
-from openai import OpenAI
-
-deepSeekClient = OpenAI(api_key=os.environ.get('DEEPSEEK_API_KEY'), base_url="https://api.deepseek.com")
+# The user provides an input to Gemini.
+# Gemini generates an output.
+# DeepSeek evaluates Gemini's output to verify its reliability.
+# If the output is reliable, it is returned to the user.
+# If the output is not verified, DeepSeek generates a new output based on Gemini's output.
+# The output is evaluated by Gemini.
+# Gemini performs the same process as DeepSeek to verify the new output.
+# Loop until the output is reliable. Note: to avoid infinite loops, a maximum number of iterations is 
+# set to a predefined value. The main goal of this methodology is to leverage the strengths of both LLMs 
+# to improve the reliability of the outputs provided to the user, in order to minimize the risk of misinformation.
 
 class MethodChecker:
-    def ask_to_bot(self, chatbot: cl.Chatbot, prompt : cl.Prompt) -> Tuple[bool, str]:
+    def start_method(self, prompt: cl.Prompt):
         step = cl.Step()
-        out = (False, "")
         
-        #while not step.step_evaluation and step.step_num < 2:
-        match chatbot.name:
-            case "Gemini":
-                step.chatbot_name = "Gemini"
-                out = self.__ask_gemini(prompt)
-                jw.write_json_to_file(step, prompt)
-                
-            case "Deepseek":
-                step.chatbot_name = "Deepseek"
-                out = self.__ask_deepseek(prompt)
-                jw.write_json_to_file(step, prompt)
-            
-        step.next_step()
-        step.evaluate_step(prompt.bot_output_text is not None)
-            
-                
-        return out
-    
-    def __ask_gemini(self, prompt: cl.Prompt) -> Tuple[bool, str]:
-        print("Asking Gemini...")
-        response = geminiClient.models.generate_content(
-            model="gemini-2.5-flash",
-            contents=prompt.input,
-            config=types.GenerateContentConfig(
-                system_instruction="You are a fact-checking assistant. Your goal is to determine whether a given news headline is true or fake based on real-world information. \nAnswer clearly and briefly with 'True' or 'Fake' and a short explanation."
-            )
-        )
-        
-        if response.text is None:
-            raise ValueError("No response from Gemini.")
-        
-        prompt.bot_output_text = response.text
-        prompt.bot_evaluation = self.__evaluate_response(response.text)
-        
-        return (prompt.bot_evaluation, response.text)
+        gemini_eval, gemini_response = Gemini().ask(prompt)
+        prompt.bot_output_text = gemini_response
+        prompt.bot_evaluation = gemini_eval
+        step.chatbot_name = "Gemini"
+        step.evaluate_step(gemini_eval) 
 
-
-    def __ask_deepseek(self, prompt: cl.Prompt) -> Tuple[bool, str]:
-        response = deepSeekClient.chat.completions.create(
-            model="deepseek-chat",
-            messages=[
-                {"role": "system", "content": "You are a fact-checking assistant. Your goal is to determine whether a given news headline is true or fake based on real-world information. Answer clearly and briefly with 'True' or 'Fake' and a short explanation."}, # System message to set the behavior of the assistant
-                {"role": "user", "content": prompt.input} # User message with the news title,
-            ],
-            stream=False
-        )
+        print(f"Gemini response indicates the news is {'True' if gemini_eval else 'Fake'}")
+        print(f"Response text: {gemini_response}")
+        jw.write_json_to_file(step, prompt)
         
-        if response.choices[0].message.content is None:
-            raise ValueError("No response from Deepseek.")
+        deepseek_eval, deepseek_response = Deepseek().reply_to_gemini_output(prompt)
+        prompt.bot_output_text = deepseek_response
+        prompt.bot_evaluation = deepseek_eval
+        print(f"Deepseek response indicates the news is {'True' if deepseek_eval else 'Fake'}")
+        print(f"Response text: {deepseek_response}")
+        jw.write_json_to_file(cl.Step(), prompt)
         
-        return (self.__evaluate_response(response.choices[0].message.content), response.choices[0].message.content)
-
-    def __evaluate_response(self, response: str) -> bool:
-        text = response.strip().lower()
-
-        if text.startswith("true") or text.startswith("real"):
-            return True
-
-        if text.startswith("false") or text.startswith("fake"):
-            return False
+        if not deepseek_eval:
+            step.next_step()
+                    
         
-        raise ValueError("Response could not be evaluated as True or Fake. Response: " + response)
+        
+        

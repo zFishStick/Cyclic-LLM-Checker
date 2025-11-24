@@ -40,3 +40,6 @@ The methodology proposed is a cyclic verification between two LLMs: Gemini and D
 8. Loop until the output is reliable.
 Note: to avoid infinite loops, a maximum number of iterations is set to a predefined value.
 The main goal of this methodology is to leverage the strengths of both LLMs to improve the reliability of the outputs provided to the user, in order to minimize the risk of misinformation.
+
+## 📊 Concept Flowchart
+![Concept Flowchart](assets/concept_flowchart.png)

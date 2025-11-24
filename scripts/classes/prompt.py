@@ -21,7 +21,8 @@ class Dataset1Prompt(Prompt):
         self.response = (
             f"A friend talked me about this news: '{news.title}'  "
             f"with the following description: {news.text}. "
-            f"For him, the news is "
+            f"He replied with this statement: '{self.bot_output_text}'. "
+            f"Is his statement true or fake? Explain briefly why."
         )
 
 class Dataset2Prompt(Prompt):
