@@ -3,6 +3,7 @@ from classes.news import News
 from classes.prompt import Dataset1Prompt, Dataset2Prompt
 import method_checker as mc
 import datasets_manager as dm
+from classes.chatbot import deepseek
 
 def main():    
     news = dm.get_random_entry_from_first_dataset()
@@ -22,8 +23,7 @@ def main():
     
     method_checker = mc.MethodChecker()
     method_checker.start_method(prompt)
-        
-
+    
 if __name__ == "__main__":
     main()
     

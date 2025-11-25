@@ -16,7 +16,7 @@ class Dataset1Prompt(Prompt):
         self.input = (
             f"I read this news: '{news.title}'. "
             f"The description of this article is the following: {news.text} "
-            f"Is this true or fake? Explain briefly why."
+            f"Is this true or fake? Explain briefly and in a human way why."
         ),
         self.response = (
             f"A friend talked me about this news: '{news.title}'  "
@@ -31,7 +31,7 @@ class Dataset2Prompt(Prompt):
         self.input = (
             f"I read this news: '{news.title}'. "
             f"The url of this article is the following: {news.url} "
-            f"Is this true or fake? Explain briefly why."
+            f"Is this true or fake? Explain briefly and in a human way why."
         )
         
         
