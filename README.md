@@ -22,6 +22,7 @@ To run the notebooks, you can use VSCode with the [Jupyter](https://marketplace.
 - Gabriel Pesce
     - Repository manager
     - Notebooks developer (Analysis, Preprocessing and Introductory)
+    - Program developer (Code of classes and functions to run the project)
 - Tidiane Bengriche
     - Notebooks developer (Analysis, Preprocessing)
 - Małgorzata Gierdewicz
