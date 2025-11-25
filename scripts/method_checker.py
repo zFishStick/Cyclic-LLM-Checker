@@ -1,47 +1,75 @@
 
 import classes as cl
 
-from typing import Tuple
 import json_writer as jw
 
 from classes.chatbot.gemini import Gemini
 from classes.chatbot.deepseek import Deepseek
 
-# The user provides an input to Gemini.
-# Gemini generates an output.
-# DeepSeek evaluates Gemini's output to verify its reliability.
-# If the output is reliable, it is returned to the user.
-# If the output is not verified, DeepSeek generates a new output based on Gemini's output.
-# The output is evaluated by Gemini.
-# Gemini performs the same process as DeepSeek to verify the new output.
-# Loop until the output is reliable. Note: to avoid infinite loops, a maximum number of iterations is 
-# set to a predefined value. The main goal of this methodology is to leverage the strengths of both LLMs 
-# to improve the reliability of the outputs provided to the user, in order to minimize the risk of misinformation.
-
 class MethodChecker:
-    def start_method(self, prompt: cl.Prompt):
-        step = cl.Step()
-        
-        gemini_eval, gemini_response = Gemini().ask(prompt)
-        prompt.bot_output_text = gemini_response
-        prompt.bot_evaluation = gemini_eval
-        step.chatbot_name = "Gemini"
-        step.evaluate_step(gemini_eval) 
+    def __init__(self, step_limit: int = 6):
+        self.step_limit = step_limit
 
-        print(f"Gemini response indicates the news is {'True' if gemini_eval else 'Fake'}")
-        print(f"Response text: {gemini_response}")
+    def start_method(self, prompt: cl.Prompt):
+        steps = 0
+        step = cl.Step()
+
+        gemini_eval, gemini_text = Gemini().ask(prompt)
+        step.chatbot_name = "Gemini"
+        step.evaluate_step(gemini_eval)
         jw.write_json_to_file(step, prompt)
-        
-        deepseek_eval, deepseek_response = Deepseek().reply_to_gemini_output(prompt)
-        prompt.bot_output_text = deepseek_response
-        prompt.bot_evaluation = deepseek_eval
-        print(f"Deepseek response indicates the news is {'True' if deepseek_eval else 'Fake'}")
-        print(f"Response text: {deepseek_response}")
-        jw.write_json_to_file(cl.Step(), prompt)
-        
-        if not deepseek_eval:
+
+        print(f"[STEP 0][Gemini] Eval={gemini_eval}")
+        print(gemini_text)
+
+        ds_accept, ds_eval_text = Deepseek().evaluate_output(gemini_text)
+        step.next_step()
+        step.chatbot_name = "Deepseek"
+        step.evaluate_step(ds_accept)
+        prompt.bot_output_text = ds_eval_text
+        jw.write_json_to_file(step, prompt)
+
+        print(f"[STEP 1][DeepSeek evaluate] Accept={ds_accept}")
+        print(ds_eval_text)
+
+        if ds_accept:
+            return (gemini_eval, gemini_text)
+
+        last_output = gemini_text
+        last_eval = gemini_eval
+
+        while steps < self.step_limit:
+
+            steps += 1
+
+            ds_new_eval, ds_new_text = Deepseek().rewrite_output(last_output)
             step.next_step()
-                    
-        
-        
-        
+            step.chatbot_name = "Deepseek"
+            step.evaluate_step(ds_new_eval)
+            prompt.bot_output_text = ds_new_text
+            jw.write_json_to_file(step, prompt)
+
+            print(f"[LOOP][DeepSeek rewrite] Eval={ds_new_eval}")
+            print(ds_new_text)
+
+            g_accept, g_accept_text = Gemini().evaluate_output(ds_new_text)
+            step.next_step()
+            step.chatbot_name = "Gemini"
+            step.evaluate_step(g_accept)
+            prompt.bot_output_text = g_accept_text
+            jw.write_json_to_file(step, prompt)
+
+            print(f"[LOOP][Gemini evaluate] Accept={g_accept}")
+            print(g_accept_text)
+
+            if g_accept:
+                return (ds_new_eval, ds_new_text)
+
+            last_output = ds_new_text
+            last_eval = ds_new_eval
+
+        print("Step limit reached, final output may not be fully verified.")
+        return (last_eval, last_output)
+
+                
+            
