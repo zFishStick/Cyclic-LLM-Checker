@@ -44,3 +44,17 @@ The main goal of this methodology is to leverage the strengths of both LLMs to i
 
 ## 📊 Concept Flowchart
 ![Concept Flowchart](assets/concept_flowchart.png)
+
+## 🔑 About API Keys
+This project integrates two different LLM providers: Gemini and DeepSeek.
+To run the code locally and compare how the two models behave, you will need to provide two API keys, one for each service.
+### 🔷 Gemini
+Obtaining a Gemini key is straightforward and completely free.
+- Visit the official documentation page: https://ai.google.dev/gemini-api/docs
+- From the top navigation bar, open the API Keys section.
+- Create a new key by choosing a project name and a token name.
+- Once generated, set it as an environment variable: `GEMINI_API_KEY="your_key_here"`
+### 🐋 DeepSeek
+- A DeepSeek API key can be created from the official dashboard: https://api-docs.deepseek.com/
+- The process is similar to Gemini: choose a name and generate a token. However, DeepSeek requires a minimum top-up of $2 before you can make API requests. This limitation will be addressed in future versions of the project, so users will be able to test the method without needing to pay upfront.
+- Once you have the key, add it as an environment variable: `DEEPSEEK_API_KEY="your_key_here"`
