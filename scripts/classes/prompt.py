@@ -7,8 +7,16 @@ class Prompt:
         self.input = input
         self.bot_output_text = ""
         self.bot_evaluation = False
-        self.response = ""
         self.news = news
+        self.update_response()
+        
+    def update_response(self):
+        self.response = (
+            f"A friend talked me about this news: '{self.news.title}'  "
+            f"with the following description: {self.news.text}. "
+            f"He replied with this statement: '{self.bot_output_text}'. "
+            f"Is his statement true or fake? Do you agree? Explain briefly why."
+        )
         
 class Dataset1Prompt(Prompt):
     def __init__(self, news: News):
@@ -16,13 +24,13 @@ class Dataset1Prompt(Prompt):
         self.input = (
             f"I read this news: '{news.title}'. "
             f"The description of this article is the following: {news.text} "
-            f"Is this true or fake? Explain briefly and in a human way why."
-        ),
+        )
+        
         self.response = (
             f"A friend talked me about this news: '{news.title}'  "
             f"with the following description: {news.text}. "
             f"He replied with this statement: '{self.bot_output_text}'. "
-            f"Is his statement true or fake? Explain briefly why."
+            f"Is his statement true or fake? Do you agree? Explain briefly why."
         )
 
 class Dataset2Prompt(Prompt):
