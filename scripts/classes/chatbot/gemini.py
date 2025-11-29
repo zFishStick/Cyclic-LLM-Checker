@@ -48,7 +48,7 @@ class Gemini:
     def rewrite_output(self, prev_output: str):
         response = geminiClient.models.generate_content(
             model="gemini-2.5-flash",
-            contents=f"The previous reasoning was rejected. Rewrite a better fact-checking analysis.\n\nPrevious reasoning:\n{prev_output}"
+            contents=f"The previous reasoning was rejected. Rewrite a better fact-checking analysis.Answer clearly and briefly with 'True' or 'Fake' and a short explanation.\n\nPrevious reasoning:\n{prev_output}"
         )
         text = response.text
         
