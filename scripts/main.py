@@ -33,15 +33,26 @@ def run_one() -> bool:
         method_checker.start_method(prompt)
         return True
     except Exception as e:
-        print(f"[Skip] Error: {e}")
+        msg = str(e)
+        if "429 RESOURCE_EXHAUSTED" in msg:
+            raise
+        print(f"[Skip] Error: {msg}")
         return False
 
-def main(runs: int = 50):
+def main(runs: int = 10):
     successes = 0
     attempts = 0
     while successes < runs:
         attempts += 1
-        ok = run_one()
+        try:
+            ok = run_one()
+        except Exception as e:
+            if "429 RESOURCE_EXHAUSTED" in str(e):
+                print("[Quota] 429 RESOURCE_EXHAUSTED detected. Stopping runs and showing metrics.")
+                break
+            else:
+                print(f"[Error] Unexpected exception: {e}")
+                ok = False
         print("\n-----------------------\n")
         if ok:
             successes += 1

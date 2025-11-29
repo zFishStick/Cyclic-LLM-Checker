@@ -2094,5 +2094,18 @@
                 "bot_output": "Accept. The reasoning correctly identifies that the article presents outdated events as recent, making it misleading despite the underlying facts being historically accurate."
             }
         ]
+    },
+    {
+        "News title": " FBI: After Blocking Trump\u2019s Muslim Ban, Hawaii Judge Inundated With Threats",
+        "is_fake": true,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": null,
+                "bot_output": "Fake\nExplanation: While many individual facts appear verifiable, the article contains a strong manipulative tone with terms like \"alleged president\" and \"Merrick Garland's stolen seat,\" culminating in an overtly biased and unsubstantiated accusation (\"It's clear that Trump is inciting these threats\") and a political slogan (\"LOCK HIM UP!\"), making the narrative unreliable as objective reporting."
+            }
+        ]
     }
 ]

@@ -23,3 +23,10 @@ def get_random_entry_from_first_dataset() -> dict:
     df = get_first_dataset()
     random_entry = df.sample(n=1).iloc[0]
     return random_entry.to_dict()
+
+
+# Debug
+def get_fake_news_from_first_dataset() -> pd.DataFrame:
+    df = get_first_dataset()
+    fake_news_df = df[df['is_fake_news'] == True]
+    return fake_news_df
