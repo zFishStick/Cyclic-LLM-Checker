@@ -56,5 +56,63 @@
                 "bot_output": "Accept.\n\nExplanation: The provided text describes a specific political event with a coherent narrative and no internal contradictions, making the described \"news\" plausible as a factual report."
             }
         ]
+    },
+    {
+        "News title": " Short Film Envisions Effect Global Warming Will Have On New York With Terrifying Accuracy (VIDEO)",
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation": true,
+                "bot_output": "True\nExplanation: The article describes a real short film, its creators, and the context of real political events, despite containing strong editorial opinions and a clear political stance."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation": false,
+                "bot_output": "Reject\nThe classification is incorrect because the text describes a real short film and factual events, so \"True\" is the accurate classification, not \"Fake.\""
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 2,
+                "step_evaluation": true,
+                "bot_output": "True\n\nExplanation: The content presents a coherent and verifiable description of a real short film and factual events without contradictions or manipulative language."
+            },
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 3,
+                "step_evaluation": true,
+                "bot_output": "Accept.\n\nThe explanation correctly identifies that the provided text describes a real short film and factual events related to climate change and the Paris Agreement without contradictions."
+            }
+        ]
+    },
+    {
+        "News title": " SICK: Trump Told 14-Year-Old Girls He Would Be Dating Them In A Couple Years",
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation": true,
+                "bot_output": "True\nExplanation: The article presents verifiable-style statements with specific sources (Chicago Tribune, Jane Doe lawsuit), and the narrative is internally coherent despite a highly manipulative and biased tone."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation": false,
+                "bot_output": "Reject\n\nExplanation: The classification as \"True\" is incorrect because the article contains unverified claims presented as fact, specifically the assertion about a child rape case involving Trump, which lacks credible evidence and has been widely disputed."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 2,
+                "step_evaluation": false,
+                "bot_output": "False\nExplanation: The article presents an unsubstantiated claim about a child rape case involving Trump as factual, but this allegation lacks credible evidence and has been widely disputed."
+            },
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 3,
+                "step_evaluation": true,
+                "bot_output": "Accept\n\nThe assistant's statement is correct. The article presents the \"Jane Doe\" child rape case as a credible, ongoing legal matter (\"gives more credibility to a child rape case that Trump is currently embroiled in,\" \"sounds like Jane Doe has a case\"). However, this lawsuit was highly disputed, faced significant questions about its credibility, and was later dropped by the plaintiff shortly after the article's likely publication period. Therefore, the article's presentation of this specific claim as factual and credible is factually inaccurate."
+            }
+        ]
     }
 ]

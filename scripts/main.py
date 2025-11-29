@@ -6,8 +6,8 @@ import datasets_manager as dm
 from classes.chatbot import deepseek
 
 def main():    
-    # news = dm.get_random_entry_from_first_dataset()
-    news = dm.get_fake_news_from_first_dataset().sample(n=1).iloc[0]
+    news = dm.get_random_entry_from_first_dataset()
+    # news = dm.get_fake_news_from_first_dataset().sample(n=1).iloc[0]
     
     news_instance = News(
         title=news['title'],

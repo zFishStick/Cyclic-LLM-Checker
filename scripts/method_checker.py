@@ -53,7 +53,7 @@ class MethodChecker:
             step.chatbot_name = "Deepseek"
             step.evaluate_step(ds_new_eval)
             prompt.bot_output_text = ds_new_text
-            prompt.bot_evaluation = ds_new_eval
+            # prompt.bot_evaluation = ds_new_eval
             prompt.update_response()
             jw.write_json_to_file(step, prompt)
 
@@ -82,7 +82,7 @@ class MethodChecker:
             step.chatbot_name = "Gemini"
             step.evaluate_step(g_new_eval)
             prompt.bot_output_text = g_new_text
-            prompt.bot_evaluation = g_new_eval
+            # prompt.bot_evaluation = g_new_eval
             prompt.update_response()
             jw.write_json_to_file(step, prompt)
             
