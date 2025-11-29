@@ -16,7 +16,9 @@ class MethodChecker:
 
         gemini_eval, gemini_text = Gemini().ask(prompt)
         step.chatbot_name = "Gemini"
-        step.evaluate_step(gemini_eval)
+        # Gemini provides a news evaluation
+        step.set_news_evaluation(gemini_eval)
+        step.set_chatbot_agreement(None)
         jw.write_json_to_file(step, prompt)
 
         print(f"[STEP 0][Gemini] Eval={gemini_eval}")
@@ -25,7 +27,10 @@ class MethodChecker:
         ds_accept, ds_eval_text = Deepseek().evaluate_output(gemini_text)
         step.next_step()
         step.chatbot_name = "Deepseek"
-        step.evaluate_step(ds_accept)
+        # Deepseek evaluates Gemini's output -> chatbot agreement
+        step.set_chatbot_agreement(ds_accept)
+        # If Deepseek accepts, copy Gemini's news evaluation; else None
+        step.set_news_evaluation(gemini_eval if ds_accept else None)
         prompt.bot_output_text = ds_eval_text
         jw.write_json_to_file(step, prompt)
 
@@ -39,13 +44,14 @@ class MethodChecker:
         last_eval = gemini_eval
 
         while steps < self.step_limit:
-
             steps += 1
 
             ds_new_eval, ds_new_text = Deepseek().rewrite_output(last_output)
             step.next_step()
             step.chatbot_name = "Deepseek"
-            step.evaluate_step(ds_new_eval)
+            # Deepseek proposes a new news evaluation
+            step.set_news_evaluation(ds_new_eval)
+            step.set_chatbot_agreement(None)
             prompt.bot_output_text = ds_new_text
             jw.write_json_to_file(step, prompt)
 
@@ -55,7 +61,10 @@ class MethodChecker:
             g_accept, g_accept_text = Gemini().evaluate_output(ds_new_text)
             step.next_step()
             step.chatbot_name = "Gemini"
-            step.evaluate_step(g_accept)
+            # Gemini evaluates Deepseek's output -> chatbot agreement
+            step.set_chatbot_agreement(g_accept)
+            # If Gemini accepts, copy Deepseek's news evaluation; else None
+            step.set_news_evaluation(ds_new_eval if g_accept else None)
             prompt.bot_output_text = g_accept_text
             jw.write_json_to_file(step, prompt)
 

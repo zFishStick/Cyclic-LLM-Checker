@@ -1,11 +1,11 @@
 """
 Metrics computation for LLM fake news detection evaluation.
 
-Confusion Matrix:
-- True Negative (TN): News is fake AND LLM detects it as fake (step_evaluation=False) → Good
-- False Positive (FP): News is fake BUT LLM accepts it as true (step_evaluation=True) → Bad
-- True Positive (TP): News is true AND LLM accepts it as true (step_evaluation=True) → Good
-- False Negative (FN): News is true BUT LLM rejects it as false (step_evaluation=False) → Bad
+Confusion Matrix (uses step_evaluation_news):
+- True Negative (TN): News is fake AND LLM detects it as fake (step_evaluation_news=False) → Good
+- False Positive (FP): News is fake BUT LLM accepts it as true (step_evaluation_news=True) → Bad
+- True Positive (TP): News is true AND LLM accepts it as true (step_evaluation_news=True) → Good
+- False Negative (FN): News is true BUT LLM rejects it as false (step_evaluation_news=False) → Bad
 
 Metrics:
 - Vigilance = TN / (TN + FP) - Capacity to find false news
@@ -33,20 +33,21 @@ def compute_confusion_matrix(json_path: str):
         
         for step in entry.get('Steps', []):
             chatbot_name = step.get('chatbot_name', 'Unknown')
-            step_evaluation = step.get('step_evaluation', None)
+            # Prefer new field; fallback to legacy 'step_evaluation' if present
+            step_eval_news = step.get('step_evaluation_news', step.get('step_evaluation', None))
             
-            if step_evaluation is None:
+            if step_eval_news is None:
                 continue
             
             if is_fake:
-                if not step_evaluation:
+                if not step_eval_news:
                     # News is fake, LLM correctly rejects → TN
                     stats[chatbot_name]['TN'] += 1
                 else:
                     # News is fake, LLM incorrectly accepts → FP
                     stats[chatbot_name]['FP'] += 1
             else:
-                if step_evaluation:
+                if step_eval_news:
                     # News is true, LLM correctly accepts → TP
                     stats[chatbot_name]['TP'] += 1
                 else:

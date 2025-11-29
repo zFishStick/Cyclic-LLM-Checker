@@ -60,7 +60,7 @@ class Deepseek:
             model="deepseek-chat",
             messages=[
                 {"role": "system", "content":
-                    "Rewrite the following fact-checking reasoning to make it more accurate, reliable, and factual."
+                    "Rewrite the following fact-checking reasoning to make it more accurate, reliable, and factual. Answer clearly and briefly with 'True' or 'Fake' and a short explanation."
                 },
                 {"role": "user", "content":
                     f"The previous reasoning was rejected. Rewrite a better fact-checking analysis.\n\nPrevious reasoning:\n{prev_output}"

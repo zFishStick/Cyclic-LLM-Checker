@@ -41,7 +41,8 @@ def write_json_to_file(step: Step, prompt: Prompt) -> None:
     method_step = {
         "chatbot_name": step.chatbot_name,
         "step_num": step.step_num,
-        "step_evaluation": step.step_evaluation,
+        "step_evaluation_news": step.step_evaluation_news,
+        "step_evaluation_chatbot": step.step_evaluation_chatbot,
         "bot_output": prompt.bot_output_text
     }
 
