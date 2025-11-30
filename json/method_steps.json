@@ -1,6 +1,6 @@
 [
     {
-        "News title": "U.S.-Cuba detente supporters make last-ditch effort to sway Trump",
+        "News title": "UK on Trump invite to 10 Downing Street: Not just yet",
         "is_fake": false,
         "Steps": [
             {
@@ -8,39 +8,39 @@
                 "step_num": 0,
                 "step_evaluation_news": true,
                 "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The text is internally coherent, presents information factually with attributed sources, and lacks manipulative language."
+                "bot_output": "True\nExplanation: The article reports conflicting statements from different parties (Trump, UK spokesman, Downing Street source) and attributes all claims clearly without presenting speculation as established fact."
             },
             {
                 "chatbot_name": "Deepseek",
                 "step_num": 1,
                 "step_evaluation_news": true,
                 "step_evaluation_chatbot": true,
-                "bot_output": "Accept\n\nThe classification is correct because the article presents factual information about U.S. organizations sending a letter to President-elect Trump regarding Cuba policy, includes specific organizational names and direct quotes, and reports verifiable events without manipulative language."
+                "bot_output": "Accept\n\nThe classification correctly identifies that the article presents conflicting factual claims from different sources (Trump's assertion of an invitation versus UK officials' denials) without presenting speculation as established fact, maintaining journalistic neutrality by attributing statements to their respective sources."
             }
         ]
     },
     {
-        "News title": "OBAMA BRAGS About Hijacking 1.35 Million Acres In Utah, Nevada\u2026Despite Opposition\u2026Posts Wrong Picture Of Land",
-        "is_fake": true,
+        "News title": "Lebanon's Hariri takes critical line on Hezbollah",
+        "is_fake": false,
         "Steps": [
             {
                 "chatbot_name": "Gemini",
                 "step_num": 0,
-                "step_evaluation_news": false,
+                "step_evaluation_news": true,
                 "step_evaluation_chatbot": null,
-                "bot_output": "Fake\nExplanation: The article uses highly manipulative language, such as \"hijacking\" and \"brags,\" and presents a misleading claim about the federal government \"taking private and state land\" when monuments are typically designated on existing federal land."
+                "bot_output": "True\nExplanation: The article reports attributed statements and verifiable facts, and clearly distinguishes between claims and denials (e.g., \"Gulf monarchies have accused...\", \"Hezbollah denies...\")."
             },
             {
                 "chatbot_name": "Deepseek",
                 "step_num": 1,
-                "step_evaluation_news": false,
+                "step_evaluation_news": true,
                 "step_evaluation_chatbot": true,
-                "bot_output": "Accept\n\nThe classification correctly identifies the article as fake because it falsely claims the federal government took private and state land, when national monument designations under the Antiquities Act apply only to existing federal land, not private or state property."
+                "bot_output": "Accept\n\nThe classification correctly identifies that the article presents verifiable facts and attributed statements, clearly distinguishing between accusations, denials, and reported events without presenting speculation as established fact."
             }
         ]
     },
     {
-        "News title": " Arkansas School \u2018Desegregates\u2019 By Only Calling Black Students To Assembly On Gangs And Drugs (VIDEO)",
+        "News title": " Carson Gives LAUGHABLE Reason Trump Won\u2019t Discuss His Good Deeds",
         "is_fake": true,
         "Steps": [
             {
@@ -48,149 +48,40 @@
                 "step_num": 0,
                 "step_evaluation_news": false,
                 "step_evaluation_chatbot": null,
-                "bot_output": "Fake\nExplanation: The article employs an extremely strong manipulative tone with emotionally charged language (\"complete bullshit\") and presents biased interpretations as objective truth, making the narrative unreliable."
+                "bot_output": "Fake\nExplanation: The article presents opinion statements (e.g., \"Carson... lied about the economy,\" \"Trump's absolutely unsympathetic treatment of the Khans\") as established facts without verifiable evidence provided within the text."
             },
             {
                 "chatbot_name": "Deepseek",
                 "step_num": 1,
                 "step_evaluation_news": null,
                 "step_evaluation_chatbot": false,
-                "bot_output": "Reject\n\nThe classification as \"Fake\" is incorrect because the news article describes an actual event that occurred at Maumelle High School in Arkansas, as reported by KATV and involving statements from school officials and affected families. The core facts\u2014such as the school calling only Black students to an assembly on gangs and drugs, citing desegregation efforts\u2014are verifiable and not fabricated, regardless of the article's critical tone or language."
-            }
-        ]
-    },
-    {
-        "News title": "Facebook pushes ad overhaul before 2018 U.S. election: executive",
-        "is_fake": false,
-        "Steps": [
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 0,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article presents a coherent narrative with attributed statements and a neutral, fact-like tone, characteristic of a news report from a reputable source."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 1,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": true,
-                "bot_output": "Accept\n\nThe article is a factual Reuters news report describing Facebook's announced changes to political ad policies ahead of the 2018 U.S. elections, with direct quotes from Facebook executives and specific details about planned actions."
-            }
-        ]
-    },
-    {
-        "News title": "Chicago launches ad campaign to counter Trump's immigration efforts",
-        "is_fake": false,
-        "Steps": [
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 0,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The text appears internally coherent, fact-like, and based on verifiable-style statements with no strong manipulative tone in the reporting."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 1,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": true,
-                "bot_output": "Accept\n\nThe classification is correct because the news article describes factual events\u2014Chicago's \"One Chicago\" ad campaign, statements by Mayor Rahm Emanuel, and related federal actions\u2014without introducing unverified or fabricated claims."
-            }
-        ]
-    },
-    {
-        "News title": " Don Lemon BLOWS UP At GOP Guest For Brushing Off Trump\u2019s 2nd Amendment Threat (VIDEO)",
-        "is_fake": true,
-        "Steps": [
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 0,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article describes a specific event with named individuals and quotes, presenting a coherent narrative that could be externally verified by the existence of the mentioned video, despite a strong manipulative and biased tone."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 1,
-                "step_evaluation_news": null,
-                "step_evaluation_chatbot": false,
-                "bot_output": "Reject\n\nExplanation: The classification is incorrect because the description contains subjective and biased language (e.g., \"blatant ignorance,\" \"horrifying amount of disrespect,\" \"stupidity\"), which violates the instruction to base judgment only on factual accuracy, not tone or interpretation."
+                "bot_output": "Reject\n\nThe classification is incorrect because the article contains verifiable factual claims (e.g., Carson's actual statements about Trump's modesty, Trump's documented history of self-praise in debates) alongside opinionated language. The core claim about Carson's reasoning being contradicted by Trump's public behavior is fact-based, not purely speculative."
             },
             {
                 "chatbot_name": "Deepseek",
                 "step_num": 2,
                 "step_evaluation_news": false,
                 "step_evaluation_chatbot": null,
-                "bot_output": "Fake\n\nExplanation: The claim that \"the Earth is flat\" is factually inaccurate, as scientific evidence from multiple disciplines\u2014including astronomy, geodesy, and physics\u2014overwhelmingly confirms the Earth is an oblate spheroid."
+                "bot_output": "False  \nExplanation: The article presents unverified claims about Ben Carson's private reasoning and Donald Trump's internal motivations that cannot be fact-checked or substantiated."
             },
             {
                 "chatbot_name": "Gemini",
                 "step_num": 3,
                 "step_evaluation_news": null,
                 "step_evaluation_chatbot": false,
-                "bot_output": "Reject. The classification of \"Fake\" is accompanied by an explanation that is completely irrelevant to the news article's content. The explanation discusses the shape of the Earth, which has no connection to the described CNN segment or Donald Trump's comments. Therefore, the classification, as presented with this explanation, is not correctly justified."
+                "bot_output": "Reject.\n\nThe classification is incorrect because the article does not present unverified claims as established facts. The article *quotes* Ben Carson's claim about Donald Trump's motivations and then *critiques* that claim by presenting verifiable evidence (Trump's public bragging). The explanation misinterprets the article's purpose, which is to refute Carson's statement, not to present its own unsubstantiated claims about private reasoning or internal motivations."
             },
             {
-                "chatbot_name": "Deepseek",
+                "chatbot_name": "Gemini",
                 "step_num": 4,
                 "step_evaluation_news": false,
                 "step_evaluation_chatbot": null,
-                "bot_output": "Fake: The article contains manipulative language and presents unverified claims about election fraud as factual, which contradicts established evidence and official certifications of the election results."
-            },
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 5,
-                "step_evaluation_news": null,
-                "step_evaluation_chatbot": false,
-                "bot_output": "Reject. The assistant's statement is incorrect. The news article description does not contain any claims about election fraud. It focuses on a debate regarding Donald Trump's \"Second Amendment comments\" concerning Hillary Clinton."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 6,
-                "step_evaluation_news": false,
-                "step_evaluation_chatbot": null,
-                "bot_output": "Fake  \nExplanation: The claim about election fraud is fabricated since the actual article discusses Second Amendment comments, making this claim internally inconsistent with the source."
-            },
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 7,
-                "step_evaluation_news": null,
-                "step_evaluation_chatbot": false,
-                "bot_output": "Reject. The explanation provided (\"The claim about election fraud is fabricated...\") is incorrect because the news article description does not mention or discuss election fraud."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 8,
-                "step_evaluation_news": false,
-                "step_evaluation_chatbot": null,
-                "bot_output": "Fake\nExplanation: The article's claims about election fraud are internally inconsistent with its own descriptions of verified election security measures."
-            },
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 9,
-                "step_evaluation_news": null,
-                "step_evaluation_chatbot": false,
-                "bot_output": "Reject.\n\nThe explanation is factually incorrect. The news article discusses a debate over Donald Trump's \"Second Amendment threat\" regarding Hillary Clinton and does not make any claims about election fraud or describe election security measures."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 10,
-                "step_evaluation_news": false,
-                "step_evaluation_chatbot": null,
-                "bot_output": "Fake\n\nExplanation: The article manipulates the Second Amendment debate by implying a violent threat against a political opponent, using sensational language to distort a political statement into an incitement while lacking factual basis for this interpretation."
-            },
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 11,
-                "step_evaluation_news": false,
-                "step_evaluation_chatbot": true,
-                "bot_output": "Accept\n\nThe classification \"Fake\" is correctly applied, as the accompanying explanation accurately describes how the article presents and interprets Trump's comments. The article immediately frames Trump's \"Second Amendment\" remarks as a \"threat\" and a \"call for the assassination\" (\"suggesting that Hillary Clinton should be shot dead\") without providing the original statement for context. It uses highly charged and sensational language (\"complete dangerous psychopath,\" \"vicious fight,\" \"horrifying amount of disrespect,\" \"temper tantrum\") to describe both Trump and the subsequent discussion, thus supporting the claim that it distorts a political statement into an incitement while lacking factual basis for its specific interpretation within the text provided."
+                "bot_output": "False\nExplanation: The article critically examines an individual's claim by contrasting it directly with verifiable public statements."
             }
         ]
     },
     {
-        "News title": "U.S. lawmakers want say on any Trump Russia sanctions move",
+        "News title": "India's Modi to meet Obama, address Congress next month",
         "is_fake": false,
         "Steps": [
             {
@@ -198,19 +89,19 @@
                 "step_num": 0,
                 "step_evaluation_news": true,
                 "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The text presents a coherent narrative with specific details, attributed actions, and lacks clear signs of manipulative language or internal contradictions."
+                "bot_output": "True\nExplanation: The article reports verifiable facts and attributes statements to specific sources like the White House, U.S. House Speaker Paul Ryan, and Westinghouse Electric's CEO, without presenting speculation or opinion as established facts."
             },
             {
                 "chatbot_name": "Deepseek",
                 "step_num": 1,
                 "step_evaluation_news": true,
                 "step_evaluation_chatbot": true,
-                "bot_output": "Accept\n\nThe classification accurately reflects the article's factual reporting on bipartisan legislative efforts to review potential sanctions changes, specific bill details, and relevant political context without introducing fabricated elements."
+                "bot_output": "Accept\n\nThe classification is correct because the article contains verifiable, attributed statements from official sources (White House, Speaker Ryan, Westinghouse CEO) about scheduled meetings and historical context, without presenting speculation or unverified claims as established facts."
             }
         ]
     },
     {
-        "News title": "Trump says North Korea's Kim insulted him by calling him 'old'",
+        "News title": "Trump doubles monthly campaign fundraising, lags Clinton",
         "is_fake": false,
         "Steps": [
             {
@@ -218,21 +109,61 @@
                 "step_num": 0,
                 "step_evaluation_news": true,
                 "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article is internally coherent, presents information in a fact-like manner, and lacks manipulative language or contradictions."
+                "bot_output": "True\nExplanation: The article reports specific financial figures with attribution to federal disclosures and clearly attributes any speculative statements or opinions to specific sources, without presenting them as established facts."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "Accept\n\nThe classification is correct because the article presents verifiable financial data from official disclosures and clearly attributes speculative statements (e.g., \"Trump may still have several hurdles,\" \"Trump\u2019s surrogates have said\") to their sources rather than presenting them as established facts."
+            }
+        ]
+    },
+    {
+        "News title": "U.S. judge in California blocks Trump's order on sanctuary cities",
+        "is_fake": false,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "True\nExplanation: The article reports factual events (a judge's ruling, lawsuits, statements from officials) and clearly attributes all claims and opinions to their respective sources without presenting speculation as fact."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "Accept\n\nThe classification correctly identifies that the article reports verifiable events (court rulings, lawsuits, official statements) with proper attribution and does not present speculation as established fact."
+            }
+        ]
+    },
+    {
+        "News title": " \u2018Dealmaker\u2019 Trump LOST Votes When He Visited Congress To Beg Them To Pass His Healthcare Bill",
+        "is_fake": true,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": null,
+                "bot_output": "Fake\nExplanation: The article presents speculative outcomes and subjective opinions (\"not American nor is it healthcare,\" \"millions of Americans will lose their coverage and the price of healthcare will skyrocket,\" \"spectacularly backfired\") as established facts without verifiable evidence or proper attribution."
             },
             {
                 "chatbot_name": "Deepseek",
                 "step_num": 1,
                 "step_evaluation_news": null,
                 "step_evaluation_chatbot": false,
-                "bot_output": "Reject\n\nExplanation: The classification should be based on whether the news content matches the headline's claim. The article describes Trump stating that Kim insulted him by calling him \"old,\" but it does not provide evidence that Kim actually made such a remark; it only quotes Trump's assertion."
+                "bot_output": "Reject\n\nThe classification is incorrect because the article contains verifiable factual claims (Trump's meeting with Republicans, his \"come after you\" quote from the Washington Post, and the NBC vote count change from 17 to 27 opponents) alongside opinionated statements. The \"Fake\" classification inaccurately suggests the entire article is fabricated when it mixes factual reporting with subjective commentary."
             },
             {
                 "chatbot_name": "Deepseek",
                 "step_num": 2,
                 "step_evaluation_news": false,
                 "step_evaluation_chatbot": null,
-                "bot_output": "Fake\n\nExplanation: The article presents Trump's claim that Kim Jong-un called him \"old\" as a factual statement but provides no external verification or evidence that Kim actually made this remark, relying solely on Trump's unsupported assertion."
+                "bot_output": "False\nExplanation: The article contains verifiable factual inaccuracies, such as misreporting the number of Republican opponents and fabricating the nature of political threats."
             }
         ]
     }
