@@ -15,7 +15,6 @@ class Prompt:
             f"A friend talked me about this news: '{self.news.title}' "
             f"with the following description: {self.news.text}. "
             f"He replied with this statement: '{self.bot_output_text}', affirming it was {self.bot_evaluation}. "
-            f"Do you agree with this classification? Explain briefly why."
         )
         
 class Dataset1Prompt(Prompt):

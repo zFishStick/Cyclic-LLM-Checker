@@ -35,7 +35,6 @@ class MethodChecker:
 
         gemini_eval, gemini_text = Gemini().ask(prompt)
         step.chatbot_name = "Gemini"
-        # Gemini provides a news evaluation
         step.set_news_evaluation(gemini_eval)
         step.set_chatbot_agreement(None)
         jw.write_json_to_file(step, prompt)
@@ -46,7 +45,6 @@ class MethodChecker:
         prompt.bot_evaluation = gemini_eval
         _refresh_response(prompt)
 
-        # Pass the prompt (not raw text) so Deepseek can read prompt.response
         ds_accept, ds_eval_text = Deepseek().evaluate_output(prompt)
         step.next_step()
         step.chatbot_name = "Deepseek"
@@ -73,7 +71,6 @@ class MethodChecker:
         while steps < self.step_limit:
             steps += 1
 
-            # Deepseek rewrites using current prompt context
             ds_new_eval, ds_new_text = Deepseek().rewrite_output(prompt)
             step.next_step()
             step.chatbot_name = "Deepseek"

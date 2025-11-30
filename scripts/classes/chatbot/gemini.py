@@ -20,7 +20,6 @@ class Gemini:
             model=self.model,
             contents=prompt.input,
             config=types.GenerateContentConfig(
-                # system_instruction="You are a fact-checking assistant. Your goal is to determine whether a given news headline is true or fake based on real-world information. \nAnswer clearly and briefly with 'True' or 'Fake' and a short explanation. Avoid writing **True** or **Fake**."
                 system_instruction=(
                     "You are classifying a news article in a content-based sense.\n"
                     "Criterion: Focus on factual accuracy and whether the article presents speculative or opinion statements as established facts without verifiable evidence. Ignore tone and style unless the text asserts objective claims contradicted by evidence.\n"
