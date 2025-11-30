@@ -39,7 +39,7 @@ def run_one() -> bool:
         print(f"[Skip] Error: {msg}")
         return False
 
-def main(runs: int = 10):
+def main(runs: int = 50):
     successes = 0
     attempts = 0
     while successes < runs:

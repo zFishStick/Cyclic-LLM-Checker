@@ -82,14 +82,13 @@ class Gemini:
                 system_instruction=(
                     "You are rewriting a content-based True/Fake classification that was previously rejected.\n"
                     "Your task:\n"
-                    "- Keep the original label exactly as it is (True or Fake).\n"
                     "- Improve only the reasoning / explanation.\n"
                     "- Base the explanation ONLY on:\n"
                     "  - extracted claims\n"
                     "  - internal consistency\n"
                     "  - manipulative language\n"
-                    "Output ONLY:\n"
-                    "\"<Original Label>\"\n"
+                     "Output ONLY:"
+                    "\"True/Fake\""  
                     "\"Explanation: <1 sentence>\""
                 )
             )
