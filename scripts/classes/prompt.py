@@ -12,10 +12,10 @@ class Prompt:
         
     def update_response(self):
         self.response = (
-            f"A friend talked me about this news: '{self.news.title}'  "
+            f"A friend talked me about this news: '{self.news.title}' "
             f"with the following description: {self.news.text}. "
-            f"He replied with this statement: '{self.bot_output_text}'. "
-            f"Is his statement true or fake? Do you agree? Explain briefly why."
+            f"He replied with this statement: '{self.bot_output_text}', affirming it was {self.bot_evaluation}. "
+            f"Do you agree with this classification? Explain briefly why."
         )
         
 class Dataset1Prompt(Prompt):

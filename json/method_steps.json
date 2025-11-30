@@ -166,5 +166,74 @@
                 "bot_output": "False\nExplanation: The article contains verifiable factual inaccuracies, such as misreporting the number of Republican opponents and fabricating the nature of political threats."
             }
         ]
+    },
+    {
+        "News title": " Obama Cancels \u2018Sleep\u2019 Plans, Will Stick Around To Save The Democratic Party Instead",
+        "is_fake": true,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "True\nExplanation: The article reports Obama's stated intentions, clearly attributing his quotes to a specific source (The New Yorker)."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": null,
+                "step_evaluation_chatbot": false,
+                "bot_output": "Reject\n\nThe classification is incorrect because the article contains speculative statements presented as fact without verifiable evidence, such as \"Trump's landslide victory\" (the 2016 election was decided by electoral college, not a popular vote landslide) and \"the party will be much better off with him involved than otherwise\" (an unverifiable predictive claim). While some quotes are correctly attributed, the article mixes factual reporting with unsupported assertions."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 2,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": null,
+                "bot_output": "False\nExplanation: The article presents unverified claims as factual statements, including speculative predictions about future political outcomes that cannot be objectively substantiated."
+            },
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 3,
+                "step_evaluation_news": null,
+                "step_evaluation_chatbot": false,
+                "bot_output": "Reject.\nThe article cites specific statements made by former President Obama in a verifiable interview published in The New Yorker on November 28, 2016. These quotes directly support the article's claims about his changed post-presidency plans and his intent to remain involved in supporting the Democratic Party due to Donald Trump's victory. Therefore, the claims are not \"unverified\" or \"speculative predictions\" by the article itself, but rather reported statements from Obama."
+            },
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 4,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": null,
+                "bot_output": "False\nExplanation: The article's claims are not unverified or speculative, as they are directly supported by former President Obama's specific statements in a verifiable New Yorker interview."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 5,
+                "step_evaluation_news": null,
+                "step_evaluation_chatbot": false,
+                "bot_output": "Reject\n\nThe classification is incorrect because the article accurately reports Obama's statements from The New Yorker interview, which are verifiable facts, not unverified or speculative claims. The \"False\" label misrepresents the article's factual basis."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 6,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": null,
+                "bot_output": "False  \nExplanation: The article presents fabricated quotes and events that contradict verifiable public records of Obama's actual statements and policy positions."
+            },
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 7,
+                "step_evaluation_news": null,
+                "step_evaluation_chatbot": false,
+                "bot_output": "Reject.\n\nThe classification is incorrect. The article accurately quotes Barack Obama from a November 28, 2016, interview published in The New Yorker, where he discussed his plans post-presidency and his thoughts on Donald Trump's election and the future of the Democratic Party. The quotes and the premise are verifiable."
+            },
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 8,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": null,
+                "bot_output": "False\nExplanation: The article's central assertion regarding the definitive nature of Barack Obama's post-presidency plans is factually inaccurate, as the accurately quoted statements from the November 28, 2016 New Yorker interview primarily reflect general thoughts and possibilities, not finalized strategies."
+            }
+        ]
     }
 ]
