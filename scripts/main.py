@@ -16,6 +16,12 @@ def run_one() -> bool:
             text=news['text'],
             fake=news['is_fake_news']
         )
+        
+        # Wait a bit between runs to avoid rate limits
+        import time
+        time.sleep(5) # Sleep 5 seconds between runs
+        
+        print("Waiting 5 seconds before continuing...")
 
         print("News to check:")
         print(f"Title: {news_instance.title}")
@@ -33,7 +39,7 @@ def run_one() -> bool:
         print(f"[Skip] Error: {msg}")
         return False
 
-def main(runs: int = 1): # Number of runs to perform
+def main(runs: int = 10): # Number of runs to perform
     successes = 0
     attempts = 0
     while successes < runs:
