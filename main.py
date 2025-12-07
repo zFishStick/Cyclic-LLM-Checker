@@ -1,10 +1,9 @@
 
-from classes.news import News
-from classes.prompt import Dataset1Prompt, Dataset2Prompt
-import method_checker as mc
-import datasets_manager as dm
-import metrics
-
+from scripts.classes.news import News
+from scripts.classes.prompt import Prompt, Dataset1Prompt
+import scripts.method_checker as mc
+import scripts.datasets_manager as dm
+import scripts.metrics as metrics
 
 def run_one() -> bool:
     """Run a single method iteration. Return True on success, False if exception raised."""
@@ -39,7 +38,7 @@ def run_one() -> bool:
         print(f"[Skip] Error: {msg}")
         return False
 
-def main(runs: int = 10): # Number of runs to perform
+def main(runs: int = 1): # Number of runs to perform
     successes = 0
     attempts = 0
     while successes < runs:

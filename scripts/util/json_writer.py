@@ -1,6 +1,6 @@
 
-from classes.method_step import Step
-from classes.prompt import Prompt
+from ..classes.method_step import Step
+from ..classes.prompt import Prompt
 
 import os
 import json as js

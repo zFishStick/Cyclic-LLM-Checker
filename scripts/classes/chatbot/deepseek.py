@@ -1,6 +1,6 @@
 
 from typing import Tuple
-from classes.prompt import Prompt
+from ..prompt import Prompt
 
 import os
 from openai import OpenAI

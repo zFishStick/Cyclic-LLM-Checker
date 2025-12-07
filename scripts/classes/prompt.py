@@ -1,6 +1,5 @@
 
-from typing import Tuple
-from classes.news import News
+from .news import News
 
 class Prompt:
     def __init__(self, news: News, input: str = ""):

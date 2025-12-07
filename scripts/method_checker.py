@@ -1,10 +1,10 @@
 
-import classes as cl
+from . import classes as cl
 
-import json_writer as jw
+import scripts.util.json_writer as jw
 
-from classes.chatbot.gemini import Gemini
-from classes.chatbot.deepseek import Deepseek
+from .classes.chatbot.gemini import Gemini
+from .classes.chatbot.deepseek import Deepseek
 
 def _refresh_response(prompt: cl.Prompt):
     """Rebuild prompt.response to reflect current bot_output_text for evaluation steps."""
