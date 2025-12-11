@@ -7,7 +7,8 @@ import json as js
 
 def write_json_to_file(step: Step, prompt: Prompt) -> None:
     # Always write to the project root-level json directory (not scripts/json)
-    root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    # __file__ is in scripts/util/, so we go up 3 levels to reach project root
+    root_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     json_dir = os.path.join(root_dir, "json")
     json_path = os.path.join(json_dir, "method_steps.json")
 
