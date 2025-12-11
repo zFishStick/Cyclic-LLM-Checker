@@ -14,11 +14,13 @@ class Gemini:
     
     model = "gemini-2.5-flash"
     
-    def __init__(self, use_web_search: bool = False):
+    def __init__(self, use_web_search: bool = False, use_thinking: bool = False, thinking_budget: int = 5000):
         self.use_web_search = use_web_search
+        self.use_thinking = use_thinking
+        self.thinking_budget = thinking_budget
     
     def ask(self, prompt: Prompt) -> Tuple[bool, str]:
-        print("Asking Gemini..." + (" (with web search)" if self.use_web_search else ""))
+        print("Asking Gemini..." + (" (with web search)" if self.use_web_search else "") + (" (with thinking)" if self.use_thinking else ""))
         
         config_params = {
             "system_instruction": (
@@ -37,6 +39,9 @@ class Gemini:
         if self.use_web_search:
             grounding_tool = types.Tool(google_search=types.GoogleSearch())
             config_params["tools"] = [grounding_tool]
+        
+        if self.use_thinking:
+            config_params["thinking_config"] = types.ThinkingConfig(thinking_budget=self.thinking_budget)
         
         response = geminiClient.models.generate_content(
             model=self.model,

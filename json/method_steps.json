@@ -578,5 +578,265 @@
                 "bot_output": "Accept\n\nThe article reports factual events such as the shooting and charges, but it also includes speculative statements like \"this kind of thing is a growing problem\" and opinion-based conclusions such as \"his daughter would still be alive if he hadn\u2019t shot first and thought later,\" which are presented without verifiable evidence or attribution. This matches the classification's claim that speculative and opinion statements are presented as established facts."
             }
         ]
+    },
+    {
+        "News title": " Armed White Thugs Hunt Down Black Teen Until He Collapses And Dies",
+        "is_fake": true,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": null,
+                "bot_output": "Fake\nExplanation: The article presents speculative political claims and opinions about future events and motivations (e.g., Trump's alleged encouragement of violence, the thoughts of white supremacists, the only way white supremacists can kill) as established facts without verifiable evidence."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": true,
+                "bot_output": "Accept\n\nThe classification correctly identifies that the article intersperses factual reporting of the incident with speculative political claims and opinions (e.g., predictions about future violence under Trump, assertions about white supremacists' motivations) presented as established facts without verifiable evidence. This aligns with the evaluation criteria focusing on factual accuracy and the presentation of unverified statements as facts."
+            }
+        ]
+    },
+    {
+        "News title": "Federal judge strikes down parts of Wisconsin voter laws",
+        "is_fake": false,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "True\nExplanation: The article reports factual judicial rulings and clearly attributes all opinions, claims, and expectations to their sources without presenting speculation as verified fact."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "Accept  \nThe classification is correct because the article accurately reports on a real judicial ruling and attributes all opinions and speculative statements, such as the expected impact on elections, to appropriate sources or frames them as expectations rather than established facts."
+            }
+        ]
+    },
+    {
+        "News title": "Lawsuit says North Carolina bathroom law still harmful",
+        "is_fake": false,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "True\nExplanation: The article reports facts about a lawsuit and legislation, clearly attributing all claims, opinions, and statements to specific sources like advocacy groups, plaintiffs, and spokespeople."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "Accept\nThe article is a factual news report from Reuters that accurately describes ongoing litigation and legislative actions in North Carolina. All claims, including those about discrimination and legal effects, are properly attributed to advocacy groups, plaintiffs, or officials, with no unverified assertions presented as established facts."
+            }
+        ]
+    },
+    {
+        "News title": "STEVE BANNON JUST MADE A BIG ANNOUNCEMENT About What He\u2019ll Be Doing After Leaving The White House\u2026And It\u2019s Very Bad News For The Left \u00a0",
+        "is_fake": true,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": null,
+                "bot_output": "Fake\nExplanation: The article presents several opinion statements and speculations, such as \"Very Bad News For The Left\" and \"Conservatives need someone like Steve Bannon more than ever,\" as established facts without clear attribution or verifiable evidence."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": true,
+                "bot_output": "Accept\n\nThe article contains verifiable factual elements, such as Steve Bannon leaving the White House and returning to Breitbart News, supported by attributed statements. However, it also presents subjective opinions like \"Very Bad News For The Left\" and \"Conservatives need someone like Steve Bannon more than ever\" as established facts without clear attribution or verifiable evidence. The classification correctly identifies this blending of speculation with factual content."
+            }
+        ]
+    },
+    {
+        "News title": "U.S., Germany eye ways to deepen cyber collaboration",
+        "is_fake": false,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "True\nExplanation: The article reports on official statements and agreements, quoting a named official, without presenting speculation or opinion as established facts."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "Accept\nThe classification is correct because the article is based on direct quotes from a named official and reports on verifiable events and agreements, without presenting speculation or opinion as established fact."
+            }
+        ]
+    },
+    {
+        "News title": " Bette Midler Just Ruined Trump\u2019s Day With A Brutal Twitter Smackdown (TWEETS)",
+        "is_fake": true,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": null,
+                "bot_output": "Fake\nExplanation: The article presents speculative statements about Donald Trump having a \"cocaine problem\" as established facts or highly probable scenarios without verifiable evidence."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": true,
+                "bot_output": "Accept\n\nThe article asserts \"Donald Trump has a cocaine problem\" as a factual claim without providing any verifiable evidence, instead basing it on speculation from a debate sniffling incident and humorous tweets. This aligns with the classification's point that speculative statements are presented as established facts."
+            }
+        ]
+    },
+    {
+        "News title": "U.S. House committee launches probe of Allergan patent deal",
+        "is_fake": false,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "True\nExplanation: The article reports factual events and clearly attributes all claims, opinions, and speculative statements to their sources without presenting them as established facts."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "Accept\n\nExplanation: The article reports verifiable events such as the House committee probe and the patent transfer deal, and consistently attributes opinions, claims, and speculative statements to specific sources (e.g., representatives, Allergan, legal experts, Mylan), without presenting them as unverified facts."
+            }
+        ]
+    },
+    {
+        "News title": "Oregon governor signs tiered minimum wage measure into law",
+        "is_fake": false,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "True\nExplanation: The article reports factual events and clearly attributes opinions or predictions to specific individuals or groups (e.g., \"Supporters say...\", \"Opponents say...\", \"Brown said...\", \"Oregon Republicans who opposed the increase predicted...\")."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "Accept  \nThe classification correctly identifies that the article reports verifiable facts (e.g., wage increases, legislative actions) and attributes opinions or predictions to specific sources, avoiding presentation of speculation as established fact."
+            }
+        ]
+    },
+    {
+        "News title": "New Jersey governor's race opens as Christie's approval slumps",
+        "is_fake": false,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "True\nExplanation: The article reports factual events and clearly attributes all opinions, predictions, and poll data to specific individuals or political observers, without presenting speculation as established facts."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "Accept. The article accurately reports factual events like Phil Murphy's candidacy and Christie's term limits, and it attributes all opinions, predictions, and poll data to specific sources such as political observers and pollsters, without presenting speculation as established fact."
+            }
+        ]
+    },
+    {
+        "News title": "Six years after BP spill, U.S. sets new offshore oil safety rules",
+        "is_fake": false,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "True\nExplanation: The article reports verifiable facts and clearly attributes all statements, opinions, and estimates to their respective sources without presenting speculation as established fact."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "Accept\n\nThe article accurately reports factual events and attributes all statements, opinions, and estimates to specific sources, such as the Interior Department, officials, and industry groups, without presenting speculation as established fact. The classification correctly reflects this."
+            }
+        ]
+    },
+    {
+        "News title": "India's Modi fights to protect home base in election",
+        "is_fake": false,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "True\nExplanation: The article reports facts and clearly attributes all claims, speculation, and opinions to specific sources or polls, without presenting them as established facts."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "Accept. The article reports factual events like Modi's campaigning and election details, attributes poll results and opinions to specific sources (e.g., ABP-CDS poll, Amit Shah, Jagdip Desai), and does not present speculation as established fact without attribution."
+            }
+        ]
+    },
+    {
+        "News title": "Cuba breaks up weekly dissident march hours before Obama visit",
+        "is_fake": false,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "True\nExplanation: The article reports facts and clearly attributes claims to their sources without presenting speculation or opinion as verified facts."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "Accept\n\nThe assistant's classification is correct because the article objectively reports events such as the march and detentions, attributing statements (e.g., detention statistics to the dissident commission) and presenting opposing viewpoints (e.g., Cuban government and dissident perspectives) without asserting speculative or unverified claims as facts."
+            }
+        ]
+    },
+    {
+        "News title": " Poll: Clinton Leads Trump By 10 Points, Obama\u2019s Approval Rating Skyrockets",
+        "is_fake": true,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": null,
+                "bot_output": "Fake\nExplanation: The article presents speculative claims, such as CNN \"cooking the polls\" and definitive statements about a \"landslide\" victory and \"the only thing\" preventing it, as established facts without verifiable evidence."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": true,
+                "bot_output": "Accept\n\nThe article includes unverified claims such as CNN \"cooking the polls\" and presents speculative statements about a \"landslide\" victory as established facts without providing evidence, aligning with the classification's critique of speculative content presented as factual."
+            }
+        ]
     }
 ]
