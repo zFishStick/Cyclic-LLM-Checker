@@ -1,20 +1,32 @@
 
 from scripts.classes.news import News
-from scripts.classes.prompt import Prompt, Dataset1Prompt
+from scripts.classes.prompt import Prompt, Dataset1Prompt, Dataset2Prompt, check_prompt_type
 import scripts.method_checker as mc
 import scripts.datasets_manager as dm
 import scripts.metrics as metrics
+import sys
 
-def run_one() -> bool:
-    """Run a single method iteration. Return True on success, False if exception raised."""
-    try:
-        news = dm.get_random_entry_from_first_dataset()
+def run_one(dataset: int = 1) -> bool:
+    """Run a single method iteration. Return True on success, False if exception raised.
     
-        news_instance = News(
-            title=news['title'],
-            text=news['text'],
-            fake=news['is_fake_news']
-        )
+    Args:
+        dataset: 1 for text-based dataset, 2 for URL-based dataset
+    """
+    try:
+        if dataset == 2:
+            news = dm.get_random_entry_from_second_dataset()
+            news_instance = News(
+                title=news['title'],
+                url=news['news_url'],
+                fake=news['is_fake_news']
+            )
+        else:
+            news = dm.get_random_entry_from_first_dataset()
+            news_instance = News(
+                title=news['title'],
+                text=news['text'],
+                fake=news['is_fake_news']
+            )
         
         # Wait a bit between runs to avoid rate limits
         import time
@@ -22,11 +34,13 @@ def run_one() -> bool:
         
         print("Waiting 5 seconds before continuing...")
 
-        print("News to check:")
+        print(f"News to check (Dataset {dataset}):")
         print(f"Title: {news_instance.title}")
         print(f"Fake: {news_instance.fake}")
+        if dataset == 2:
+            print(f"URL: {news_instance.url}")
     
-        prompt = Dataset1Prompt(news_instance)
+        prompt = check_prompt_type(news_instance)
     
         method_checker = mc.MethodChecker()
         method_checker.start_method(prompt)
@@ -38,13 +52,14 @@ def run_one() -> bool:
         print(f"[Skip] Error: {msg}")
         return False
 
-def main(runs: int = 1): # Number of runs to perform
+def main(runs: int = 50, dataset: int = 1): # Number of runs to perform
+    print(f"Starting with Dataset {dataset}\n")
     successes = 0
     attempts = 0
     while successes < runs:
         attempts += 1
         try:
-            ok = run_one()
+            ok = run_one(dataset=dataset)
         except Exception as e:
             if "429 RESOURCE_EXHAUSTED" in str(e):
                 print("[Quota] 429 RESOURCE_EXHAUSTED detected. Stopping runs and showing metrics.")

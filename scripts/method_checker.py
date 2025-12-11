@@ -32,8 +32,12 @@ class MethodChecker:
     def start_method(self, prompt: cl.Prompt):
         steps = 0
         step = cl.Step()
+        
+        # Enable web search for Dataset2Prompt (URL-based news)
+        use_web_search = isinstance(prompt, cl.Dataset2Prompt)
+        gemini = Gemini(use_web_search=use_web_search)
 
-        gemini_eval, gemini_text = Gemini().ask(prompt)
+        gemini_eval, gemini_text = gemini.ask(prompt)
         step.chatbot_name = "Gemini"
         step.set_news_evaluation(gemini_eval)
         step.set_chatbot_agreement(None)
@@ -85,7 +89,7 @@ class MethodChecker:
             print("DeepSeek rewrite: " + ds_new_text)
             print("-----")
 
-            g_accept, g_accept_text = Gemini().evaluate_output(prompt)
+            g_accept, g_accept_text = gemini.evaluate_output(prompt)
             step.next_step()
             step.chatbot_name = "Gemini"
             step.set_chatbot_agreement(g_accept)
@@ -102,7 +106,7 @@ class MethodChecker:
             if g_accept:
                 return (ds_new_eval, ds_new_text)
 
-            g_new_eval, g_new_text = Gemini().rewrite_output(prompt)
+            g_new_eval, g_new_text = gemini.rewrite_output(prompt)
             step.next_step()
             step.chatbot_name = "Gemini"
             step.set_news_evaluation(ds_new_eval)

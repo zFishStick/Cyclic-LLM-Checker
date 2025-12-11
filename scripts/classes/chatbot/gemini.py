@@ -14,26 +14,39 @@ class Gemini:
     
     model = "gemini-2.5-flash"
     
+    def __init__(self, use_web_search: bool = False, use_thinking: bool = False, thinking_budget: int = 5000):
+        self.use_web_search = use_web_search
+        self.use_thinking = use_thinking
+        self.thinking_budget = thinking_budget
+    
     def ask(self, prompt: Prompt) -> Tuple[bool, str]:
-        print("Asking Gemini...")
+        print("Asking Gemini..." + (" (with web search)" if self.use_web_search else "") + (" (with thinking)" if self.use_thinking else ""))
+        
+        config_params = {
+            "system_instruction": (
+                "You are classifying a news article in a content-based sense.\n"
+                "Criterion: Focus on factual accuracy and whether the article presents speculative or opinion statements as established facts without verifiable evidence. Ignore tone and style unless the text asserts objective claims contradicted by evidence.\n"
+                "Classify the article as **True** or **Fake**.\n"
+                "Definitions:\n"
+                "\"True\" = the article reports facts or clearly attributes claims (e.g., \"X claims...\") without presenting speculation/opinion as verified facts.\n"
+                "\"Fake\" = the article presents speculative/opinion statements as established facts without verifiable evidence, or asserts objective claims contradicted by evidence.\n"
+                "Output ONLY:"
+                "\"True/Fake\""  
+                "\"Explanation: <1 sentence>\""
+            )
+        }
+        
+        if self.use_web_search:
+            grounding_tool = types.Tool(google_search=types.GoogleSearch())
+            config_params["tools"] = [grounding_tool]
+        
+        if self.use_thinking:
+            config_params["thinking_config"] = types.ThinkingConfig(thinking_budget=self.thinking_budget)
+        
         response = geminiClient.models.generate_content(
             model=self.model,
             contents=prompt.input,
-            config=types.GenerateContentConfig(
-                system_instruction=(
-                    "You are classifying a news article in a content-based sense.\n"
-                    "Criterion: Focus on factual accuracy and whether the article presents speculative or opinion statements as established facts without verifiable evidence. Ignore tone and style unless the text asserts objective claims contradicted by evidence.\n"
-                    "Classify the article as **True** or **Fake**.\n"
-                    "Definitions:\n"
-                    "\"True\" = the article reports facts or clearly attributes claims (e.g., \"X claims...\") without presenting speculation/opinion as verified facts.\n"
-                    "\"Fake\" = the article presents speculative/opinion statements as established facts without verifiable evidence, or asserts objective claims contradicted by evidence.\n"
-
-                    "Output ONLY:"
-
-                    "\"True/Fake\""  
-                    "\"Explanation: <1 sentence>\""
-                )
-            )
+            config=types.GenerateContentConfig(**config_params)
         )
         
         if response.text is None:
