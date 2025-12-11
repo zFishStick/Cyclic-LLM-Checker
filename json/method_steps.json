@@ -218,5 +218,365 @@
                 "bot_output": "Accept\n\nThe article is an opinion piece as indicated by its title and content, which present subjective arguments about a TV show without asserting speculative claims as objective facts. The friend's classification correctly identifies this nature."
             }
         ]
+    },
+    {
+        "News title": "Harvey Weinstein Accuser Mira Sorvino Calls Charges a \"Really Good First Step\"",
+        "is_fake": false,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "True\nExplanation: The article accurately reports a statement made by Mira Sorvino regarding the charges against Harvey Weinstein, clearly attributing the opinion to her rather than presenting it as an objective fact."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "Accept. The article accurately reports Mira Sorvino's personal opinion on the charges against Harvey Weinstein, attributing the statement to her without presenting it as an objective fact."
+            }
+        ]
+    },
+    {
+        "News title": " Legally Blind \u2018Patriots\u2019 May Freely Carry Guns In This Southern State",
+        "is_fake": true,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": null,
+                "bot_output": "Fake\nExplanation: The article presents speculative and opinion statements (e.g., about specific individuals' capabilities, the danger of laws, political motivations, and future legislative outcomes) as established facts or universally known truths without verifiable evidence or clear attribution."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": true,
+                "bot_output": "Accept\n\nThe article includes verifiable facts, such as Georgia's laws allowing blind individuals to own firearms, but it presents speculative opinions\u2014like the implied danger of these laws and claims about political motivations\u2014as established facts without sufficient evidence or attribution. This aligns with the friend's classification that the article is \"Fake\" due to presenting unverified opinions as facts."
+            }
+        ]
+    },
+    {
+        "News title": " Trump Blamed Bernie Sanders For Campaign Violence, Here\u2019s His Epic Response",
+        "is_fake": true,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": null,
+                "bot_output": "Fake\nExplanation: The article presents opinion and subjective interpretation as established facts without attribution (e.g., stating Trump \"instigated\" violence and Sanders \"absolutely crushed Trump's big lie\" as objective truths rather than claims or interpretations)."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": true,
+                "bot_output": "Accept\n\nThe article presents subjective interpretations, such as Trump \"instigating\" violence and Sanders' response \"absolutely crushing\" Trump's lie, as established facts without providing verifiable evidence for these claims. While it reports factual events like Trump's blame and Sanders' statement, the inclusion of unsupported assertions aligns with the classification's critique of presenting opinion as fact."
+            }
+        ]
+    },
+    {
+        "News title": " Democrats Preparing A Coup To Oust Debbie Wasserman-Schultz",
+        "is_fake": true,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "True\nExplanation: The article attributes all claims to sources (e.g., \"The Hill reported,\" \"one Democratic Senator told The Hill\") and includes denials from other named Senators, presenting a balanced view without stating speculation as fact."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "Accept. The classification correctly notes that the article attributes claims to sources like The Hill and includes both supporting and denying perspectives, presenting a balanced report without asserting speculation as factual."
+            }
+        ]
+    },
+    {
+        "News title": "Governor of Yemen's interim capital resigns, accuses PM of corruption",
+        "is_fake": false,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "True\nExplanation: The article reports facts (resignation, lack of comment) and clearly attributes all accusations of corruption and other claims to specific individuals or groups, without presenting them as verified facts."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "Accept. The classification accurately notes that the article reports verifiable facts (e.g., the resignation, lack of comment from officials) and attributes all allegations of corruption to specific sources without presenting them as objective truths."
+            }
+        ]
+    },
+    {
+        "News title": "Senator Rand Paul returns to work after being tackled while mowing lawn",
+        "is_fake": false,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "True\nExplanation: The article reports facts and clearly attributes all claims to specific sources (e.g., Paul's Twitter, court officials, other media reports, specific interviews) without presenting speculation or opinion as established facts."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "Accept. The article accurately reports verifiable events and statements, consistently attributing information to specific sources such as official statements, court documents, and media reports, without presenting speculation or opinion as established fact."
+            }
+        ]
+    },
+    {
+        "News title": " President Obama Says What Trump Cannot Say Following Murder In Charlottesville",
+        "is_fake": true,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": null,
+                "bot_output": "Fake\nExplanation: The article presents significant speculative and opinion statements as established facts, such as \"Trump cannot say the words: this was right-wing terrorism by his own supporters,\" and \"It's because he was endorsed by every racist group across the board,\" without verifiable evidence or attribution."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": true,
+                "bot_output": "Accept. The classification accurately identifies that the article presents speculative or opinion-based statements, such as claims about Trump's inability to condemn right-wing terrorism and his endorsement by \"every racist group,\" as established facts without verifiable evidence."
+            }
+        ]
+    },
+    {
+        "News title": " The Federal Election Commission Just Told Trump They\u2019re DONE With His \u2018Voter Fraud\u2019 Lies",
+        "is_fake": true,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "True\nExplanation: The article reports on specific claims made by Trump, a Federal Election Commissioner's demand for evidence, and White House comments, using direct quotes and a tweet to substantiate these factual events, even though it includes strong authorial opinion."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "Accept\nExplanation: The classification correctly identifies that the article reports factual events\u2014Trump's voter fraud claims, FEC Commissioner Weintraub's demand for evidence, and White House statements\u2014using verifiable sources like direct quotes and a tweet. It accurately notes the inclusion of authorial opinion without presenting speculation as established fact."
+            }
+        ]
+    },
+    {
+        "News title": " Russian Lawyer Drops Bomb On Donald Trump Jr.; Alleges Direct Pay-To-Play Attempt",
+        "is_fake": true,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "True\nExplanation: The article clearly attributes claims and allegations to specific sources (e.g., \"According to the lawyer,\" \"Veselnitskaya said,\" \"Source: Newsweek\") and distinguishes them from verifiable facts, without presenting speculation or opinion as established facts."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "Accept\n\nThe article attributes all key allegations to specific sources such as Natalia Veselnitskaya and Newsweek, using qualifiers like \"alleges,\" \"according to,\" and \"allegedly\" to distinguish reported claims from established facts. While it includes interpretive statements (e.g., \"the intent was pretty clear\"), these are presented as commentary on the sourced allegations, not as verifiable facts asserted without evidence."
+            }
+        ]
+    },
+    {
+        "News title": "New Jersey Governor Christie halts road, bridge projects",
+        "is_fake": false,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "True\nExplanation: The article reports facts and clearly attributes claims and opinions to their sources without presenting speculation as established facts."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "Accept\n\nThe article accurately reports verifiable events and financial details, such as Governor Christie's executive order and the status of the Transportation Trust Fund, with all claims and opinions\u2014including the \"pure theater\" comment\u2014clearly attributed to named sources like Reuters, state officials, and lawmakers. No speculative statements are presented as established facts without evidence."
+            }
+        ]
+    },
+    {
+        "News title": " Conservatives Raise Hell Over Obama\u2019s Wedding Ring With Dumbest Conspiracy Ever (SCREENSHOTS)",
+        "is_fake": true,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "True\nExplanation: The article reports on and attributes various speculative/opinion statements made by others, and it explicitly refutes one of them, without presenting any of these speculative claims as its own established facts."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "Accept. The article reports on conspiracy theories attributed to conservatives and explicitly refutes the claim about Obama's ring having Arabic inscriptions, without presenting the speculative claims as factual."
+            }
+        ]
+    },
+    {
+        "News title": " Here\u2019s What Happened When Black Protesters Did What The Bundy Terrorists Are Doing (VIDEO)",
+        "is_fake": true,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "True\nExplanation: The article reports verifiable historical facts about the Harris Neck land dispute and protest, and generally accurate details about the Bundy standoff, while its strong opinions are presented as part of a comparative argument rather than disguised as objective, established facts."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "Accept\n\nThe historical facts cited about the Harris Neck protest and land dispute, as well as the details of the Bundy standoff, are verifiable and generally accurate. The article's strong opinions are clearly presented as part of a subjective comparison rather than as objective, established facts."
+            }
+        ]
+    },
+    {
+        "News title": "Mistrial declared in corruption case against ex-Los Angeles sheriff",
+        "is_fake": false,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "True\nExplanation: The article reports factual events from a court case and attributes claims (e.g., from spokesmen, defense, local media) without presenting speculation or opinion as established facts."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "Accept\n\nThe classification correctly identifies that the article reports factual legal proceedings and attributes specific claims to sources such as court spokesmen, local media, and the defense, without presenting speculation or unverified opinions as established facts. All statements are supported by verifiable events or attributed sources."
+            }
+        ]
+    },
+    {
+        "News title": " Dipsh*t Adjusts Gun He Was Hiding In His SOCK Shoots Himself, Stranger At Graduation Ceremony",
+        "is_fake": true,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "True\nExplanation: The article reports the core incident as facts attributed to the Augusta Police Chief and KWCH News, and while heavily opinionated, it does not present speculative statements as established facts or assert objective claims contradicted by evidence."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "Accept. The article accurately reports the factual incident as stated by the Augusta Police Chief and KWCH News, and while it includes strong opinions, these are presented as commentary rather than established facts, with no objective claims contradicted by evidence."
+            }
+        ]
+    },
+    {
+        "News title": " Elizabeth Warren Did NOT Mince Words In Her Reaction To Trump\u2019s Presumptive Nomination",
+        "is_fake": true,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "True\nExplanation: The article accurately reports Elizabeth Warren's statements and actions, clearly attributing all claims and opinions to her, rather than presenting them as its own established facts."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "Accept\n\nThe article accurately reports factual events such as Trump's primary victory and Cruz suspending his campaign, and it directly quotes Elizabeth Warren's opinions, clearly attributing them to her without presenting them as the article's own assertions. There is no evidence of speculative or unverified claims being presented as established facts."
+            }
+        ]
+    },
+    {
+        "News title": "Burundi will raise funds from citizens to pay for 2020 election",
+        "is_fake": false,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "True\nExplanation: The article reports facts and clearly attributes all claims, including government plans and statements from a minister, without presenting speculation or opinion as established facts."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "Accept\n\nThe article accurately reports the Burundian government's plans to fund the 2020 election through citizen contributions, attributing all key claims to official sources like Minister Pascal Barandagiye and providing verifiable context (e.g., World Bank data). No speculative or opinion statements are presented as established facts without evidence."
+            }
+        ]
+    },
+    {
+        "News title": "Republican Collins will stay in U.S. Senate, focused on healthcare",
+        "is_fake": false,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "True\nExplanation: The article reports facts and clearly attributes all claims, opinions, and speculative statements to specific individuals without presenting them as established facts."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "Accept\n\nExplanation: The article accurately reports verifiable events and attributes all statements, opinions, and analyses to specific sources, such as Senator Susan Collins, Professor Mark Brewer, and Senator Mitch McConnell, without presenting speculative or opinion-based content as established fact."
+            }
+        ]
+    },
+    {
+        "News title": " Convicted Felon With A Gun Has Knee-Jerk Reaction That Kills His Own Daughter",
+        "is_fake": true,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": null,
+                "bot_output": "Fake\nExplanation: The article presents speculative and opinion statements about societal issues and gun danger as established facts without verifiable evidence or attribution."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": true,
+                "bot_output": "Accept\n\nThe article reports factual events such as the shooting and charges, but it also includes speculative statements like \"this kind of thing is a growing problem\" and opinion-based conclusions such as \"his daughter would still be alive if he hadn\u2019t shot first and thought later,\" which are presented without verifiable evidence or attribution. This matches the classification's claim that speculative and opinion statements are presented as established facts."
+            }
+        ]
     }
 ]

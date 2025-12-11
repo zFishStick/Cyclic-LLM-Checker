@@ -52,7 +52,7 @@ def run_one(dataset: int = 1) -> bool:
         print(f"[Skip] Error: {msg}")
         return False
 
-def main(runs: int = 1, dataset: int = 2): # Number of runs to perform
+def main(runs: int = 50, dataset: int = 1): # Number of runs to perform
     print(f"Starting with Dataset {dataset}\n")
     successes = 0
     attempts = 0
@@ -79,13 +79,5 @@ def main(runs: int = 1, dataset: int = 2): # Number of runs to perform
     
 
 if __name__ == "__main__":
-    # Parse command line arguments: python main.py [runs] [dataset]
-    runs = int(sys.argv[1]) if len(sys.argv) > 1 else 1
-    dataset = int(sys.argv[2]) if len(sys.argv) > 2 else 2
-    
-    if dataset not in [1, 2]:
-        print("Error: dataset must be 1 (text-based) or 2 (URL-based with web search)")
-        sys.exit(1)
-    
-    main(runs=runs, dataset=dataset)
+    main()
     
