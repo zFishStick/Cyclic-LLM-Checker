@@ -1,6 +1,6 @@
 [
     {
-        "News title": "White House chief of staff not quitting, says job is not to control Trump",
+        "News title": "Chicago immigrant claims U.S. retaliated over her activism",
         "is_fake": false,
         "Steps": [
             {
@@ -8,19 +8,39 @@
                 "step_num": 0,
                 "step_evaluation_news": true,
                 "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article reports facts and clearly attributes all claims and opinions to their respective sources (e.g., Kelly, Senator Corker, \"sources familiar with the internal dynamics of the White House,\" \"critics of the president\")."
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article exhibits a neutral and informative tone, consistent with standard journalistic reporting. It clearly attributes all claims, quoting the plaintiff, her lawyer, and referencing the lawsuit directly for the alleged reasons for denial. It also includes the USCIS's standard 'no comment' response, which is a realistic detail. The article provides relevant background information on DACA and related legal challenges without resorting to emotional language or logical fallacies. The claims made are presented as allegations within a legal context, not as undisputed facts, which is appropriate for reporting on a lawsuit. There are no extraordinary claims made without proper attribution.\"\n}\n```"
             },
             {
                 "chatbot_name": "Deepseek",
                 "step_num": 1,
                 "step_evaluation_news": true,
                 "step_evaluation_chatbot": true,
-                "bot_output": "Accept. The article consistently attributes statements to specific sources, such as direct quotes from John Kelly and referenced opinions from others, without presenting speculation as unverified fact. This aligns with the classification's emphasis on factual reporting and proper sourcing."
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article exhibits a neutral and informative tone, consistent with standard journalistic reporting. It clearly attributes all claims, quoting the plaintiff, her lawyer, and referencing the lawsuit directly for the alleged reasons for denial. It also includes the USCIS's standard 'no comment' response, which is a realistic detail. The article provides relevant background information on DACA and related legal challenges without resorting to emotional language or logical fallacies. The claims made are presented as allegations within a legal context, not as undisputed facts, which is appropriate for reporting on a lawsuit. There are no extraordinary claims made without proper attribution.\"\n}\n```"
             }
         ]
     },
     {
-        "News title": "\u201cDear Mr. Trump\u201d\u2026NBC Uses Kids To Make STUNNING Anti-Trump Propaganda VIDEO\u2026PREPARE TO BE SHOCKED!",
+        "News title": "White House proposes reviving Yucca Mountain nuclear waste site",
+        "is_fake": false,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "{\"classification\": \"True\", \"explanation\": \"The article exhibits characteristics of standard journalism. It has a neutral, informative tone, provides specific details (budget figures, names of officials, dates), and attributes information to credible sources like Reuters, the White House budget plan, industry groups, and congressional hearings. It presents a balanced view by acknowledging opposition, historical context, and potential drawbacks (cuts to other programs). There are no logical fallacies, contradictions, or sensational language. The claims are plausible and well-supported by internal references.\"}"
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "{\"classification\": \"True\", \"explanation\": \"The article exhibits characteristics of standard journalism. It has a neutral, informative tone, provides specific details (budget figures, names of officials, dates), and attributes information to credible sources like Reuters, the White House budget plan, industry groups, and congressional hearings. It presents a balanced view by acknowledging opposition, historical context, and potential drawbacks (cuts to other programs). There are no logical fallacies, contradictions, or sensational language. The claims are plausible and well-supported by internal references.\"}"
+            }
+        ]
+    },
+    {
+        "News title": " Watch Megyn Kelly Prove She Has No Idea How The First Amendment Works (VIDEO)",
         "is_fake": true,
         "Steps": [
             {
@@ -28,219 +48,33 @@
                 "step_num": 0,
                 "step_evaluation_news": false,
                 "step_evaluation_chatbot": null,
-                "bot_output": "Fake\nExplanation: The article presents numerous speculative and opinion statements (e.g., \"handpicked anti-Trump tykes,\" \"propaganda videos,\" \"smarmy, false compliments,\" \"Susie Snowflake's feelings\") as established facts without verifiable evidence."
+                "bot_output": "```json\n{\n  \"classification\": \"Fake\",\n  \"explanation\": \"The article exhibits a highly manipulative and biased tone, using emotionally charged and inflammatory language throughout. Phrases like 'Prove She Has No Idea How The First Amendment Works,' 'spew whatever hateful rhetoric he wants,' 'preach hate against minorities and make jokes about how big their d*cks are,' 'Trump couldn't handle that,' and 'nearly turned into a full blown race war' are designed to provoke strong negative reactions and discredit the subjects, rather than inform neutrally. While it quotes Megyn Kelly, the article immediately follows with its own heavily biased interpretation and counter-argument. It makes strong, potentially extraordinary claims (e.g., about the St. Louis rally or the specific nature of Trump's 'hateful rhetoric') without providing specific evidence or citations within the text. The intent appears to be to persuade the reader to a particular political viewpoint and demonize the opposing side, aligning with propaganda or opinion commentary rather than objective journalism.\"\n}\n```"
             },
             {
                 "chatbot_name": "Deepseek",
                 "step_num": 1,
+                "step_evaluation_news": null,
+                "step_evaluation_chatbot": false,
+                "bot_output": "```json\n{\n  \"classification\": \"Fake\",\n  \"explanation\": \"The article exhibits a highly manipulative and biased tone, using emotionally charged and inflammatory language throughout. Phrases like 'Prove She Has No Idea How The First Amendment Works,' 'spew whatever hateful rhetoric he wants,' 'preach hate against minorities and make jokes about how big their d*cks are,' 'Trump couldn't handle that,' and 'nearly turned into a full blown race war' are designed to provoke strong negative reactions and discredit the subjects, rather than inform neutrally. While it quotes Megyn Kelly, the article immediately follows with its own heavily biased interpretation and counter-argument. It makes strong, potentially extraordinary claims (e.g., about the St. Louis rally or the specific nature of Trump's 'hateful rhetoric') without providing specific evidence or citations within the text. The intent appears to be to persuade the reader to a particular political viewpoint and demonize the opposing side, aligning with propaganda or opinion commentary rather than objective journalism.\"\n}\n```"
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 2,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": null,
+                "bot_output": "Fake\nExplanation: The article presents claims, like the assertion that a rally nearly incited a race war, which are not supported by verifiable evidence and conflict with factual accuracy."
+            },
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 3,
                 "step_evaluation_news": false,
                 "step_evaluation_chatbot": true,
-                "bot_output": "Accept\n\nThe article described uses subjective and inflammatory language (e.g., \"handpicked anti-Trump tykes,\" \"propaganda videos\") to present speculative opinions as factual claims without providing verifiable evidence for these assertions. The friend's classification correctly identifies that the article presents opinion statements as established facts, which aligns with the criteria for evaluating factual accuracy and the presentation of unverified claims."
+                "bot_output": "Fake\nExplanation: The article presents claims, like the assertion that a rally nearly incited a race war, which are not supported by verifiable evidence and conflict with factual accuracy."
             }
         ]
     },
     {
-        "News title": "Graphic account of Hulk Hogan sex tape read in Florida court",
-        "is_fake": false,
-        "Steps": [
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 0,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article reports on a court case, clearly attributing statements to individuals involved (e.g., \"Gawker founder Nick Denton read...\", \"Hogan says...\", \"Denton said...\") and refrains from presenting speculative or opinion statements as established facts."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 1,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": true,
-                "bot_output": "Accept. The article is a factual report of courtroom events and statements, accurately attributing all claims to involved parties such as Nick Denton and Hulk Hogan, with no speculative or unverified assertions presented as established facts."
-            }
-        ]
-    },
-    {
-        "News title": "U.N. chief says two-state Mideast solution is the only way",
-        "is_fake": false,
-        "Steps": [
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 0,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article reports statements made by officials and attributes them clearly, without presenting speculation or opinion as established facts."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 1,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": true,
-                "bot_output": "Accept  \nThe article accurately reports attributed statements from officials such as U.N. Secretary-General Antonio Guterres and others without presenting speculation or opinion as established facts, aligning with the assistant's classification."
-            }
-        ]
-    },
-    {
-        "News title": "U.S. House to weigh $622.1 million in new Zika funding",
-        "is_fake": false,
-        "Steps": [
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 0,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article reports factual information about legislative proposals, quotes individuals, and describes known medical links without presenting speculation or opinion as established facts."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 1,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": true,
-                "bot_output": "Accept\n\nThe article reports verifiable facts about legislative funding proposals, accurately quotes officials, and describes established medical links regarding Zika virus, all without presenting speculation or unverified claims as fact. The classification correctly reflects the content."
-            }
-        ]
-    },
-    {
-        "News title": "China says it will make efforts on Syria reconstruction",
-        "is_fake": false,
-        "Steps": [
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 0,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article reports attributed statements from officials and widely accepted geopolitical facts without presenting speculative or opinion statements as established facts."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 1,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": true,
-                "bot_output": "Accept. The article consistently attributes statements to officials like Foreign Minister Wang Yi and cites verifiable geopolitical context, with no unsupported speculative claims presented as factual."
-            }
-        ]
-    },
-    {
-        "News title": "U.S. could start missing payments on October 2: think tank",
-        "is_fake": false,
-        "Steps": [
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 0,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article clearly attributes all speculative statements and projections to a specific source, the Bipartisan Policy Center, and does not present opinions or possibilities as established facts."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 1,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": true,
-                "bot_output": "Accept\n\nThe article consistently attributes speculative statements and projections to the Bipartisan Policy Center or other named sources, using conditional language like \"might\" and \"could,\" and does not present opinions or unverified claims as established facts."
-            }
-        ]
-    },
-    {
-        "News title": "House panel okays Dodd-Frank revamp amid partisan rancor",
-        "is_fake": false,
-        "Steps": [
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 0,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article reports facts about a legislative vote and accurately attributes all opinions and speculative statements to specific individuals or groups without presenting them as established facts."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 1,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": true,
-                "bot_output": "Accept\nThe classification correctly assesses the article as factual, reporting verifiable events such as the committee vote and bill details, and properly attributes opinion statements to specific individuals or groups without presenting them as established facts."
-            }
-        ]
-    },
-    {
-        "News title": "State lawmakers override bill veto to ease Chicago pension payments",
-        "is_fake": false,
-        "Steps": [
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 0,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article reports factual events, legislative actions, and financial figures, and clearly attributes all claims, opinions, and contentions to their respective sources without presenting speculation as established facts."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 1,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": true,
-                "bot_output": "Accept\n\nThe classification is correct because the article accurately reports verifiable events, such as legislative votes and financial data, and attributes all opinions and contested claims to specific sources, such as city officials and the governor's spokeswoman, without presenting speculation as established fact."
-            }
-        ]
-    },
-    {
-        "News title": "Trump admin willing to work with Congress on war authorization: lawmakers",
-        "is_fake": false,
-        "Steps": [
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 0,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article clearly attributes all claims and statements to specific individuals or official sources, without presenting speculation or opinion as established facts."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 1,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": true,
-                "bot_output": "Accept\n\nThe classification is correct because the article accurately reports statements from specific officials and senators, such as Chris Murphy and the State Department letter, without presenting speculative or opinion-based content as established facts. All claims are properly attributed to verifiable sources, and any uncertainties mentioned are contextual and not asserted as unverified truths."
-            }
-        ]
-    },
-    {
-        "News title": "Why The Arrangement is the best show on TV for the Scientology-obsessed",
-        "is_fake": false,
-        "Steps": [
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 0,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article's title clearly indicates it is an opinion piece, arguing a subjective viewpoint rather than presenting speculative claims as objective facts."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 1,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": true,
-                "bot_output": "Accept\n\nThe article is an opinion piece as indicated by its title and content, which present subjective arguments about a TV show without asserting speculative claims as objective facts. The friend's classification correctly identifies this nature."
-            }
-        ]
-    },
-    {
-        "News title": "Harvey Weinstein Accuser Mira Sorvino Calls Charges a \"Really Good First Step\"",
-        "is_fake": false,
-        "Steps": [
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 0,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article accurately reports a statement made by Mira Sorvino regarding the charges against Harvey Weinstein, clearly attributing the opinion to her rather than presenting it as an objective fact."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 1,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": true,
-                "bot_output": "Accept. The article accurately reports Mira Sorvino's personal opinion on the charges against Harvey Weinstein, attributing the statement to her without presenting it as an objective fact."
-            }
-        ]
-    },
-    {
-        "News title": " Legally Blind \u2018Patriots\u2019 May Freely Carry Guns In This Southern State",
+        "News title": " Snowflake Trump Actually Screams At White House Televisions, Proving He Is Mentally Unfit To Be President",
         "is_fake": true,
         "Steps": [
             {
@@ -248,59 +82,19 @@
                 "step_num": 0,
                 "step_evaluation_news": false,
                 "step_evaluation_chatbot": null,
-                "bot_output": "Fake\nExplanation: The article presents speculative and opinion statements (e.g., about specific individuals' capabilities, the danger of laws, political motivations, and future legislative outcomes) as established facts or universally known truths without verifiable evidence or clear attribution."
+                "bot_output": "```json\n{\n  \"classification\": \"Fake\",\n  \"explanation\": \"The article exhibits a highly manipulative tone and style, characteristic of propaganda rather than objective journalism. The title itself, 'Snowflake Trump Actually Screams At White House Televisions, Proving He Is Mentally Unfit To Be President,' uses derogatory language ('Snowflake Trump') and makes a definitive, non-journalistic judgment ('Proving He Is Mentally Unfit'). Throughout the text, the language is emotionally charged and biased, employing terms like 'senile old man' and making a direct call to action ('call for Trump s ouster'). While it cites a Trump tweet and an Associated Press report for specific claims (yelling at televisions), these are used to bolster a broader narrative of mental unfitness that is presented as an undisputed fact. The extraordinary claim that 'Even the Army field manual says that Trump has no business being commander-in-chief' is made without any specific citation or evidence, which is highly suspicious and indicative of an attempt to lend unearned authority to a subjective opinion. The article's primary intent appears to be to manipulate reader perception and advocate for a specific political outcome, rather than to inform neutrally.\"\n}\n```"
             },
             {
                 "chatbot_name": "Deepseek",
                 "step_num": 1,
                 "step_evaluation_news": false,
                 "step_evaluation_chatbot": true,
-                "bot_output": "Accept\n\nThe article includes verifiable facts, such as Georgia's laws allowing blind individuals to own firearms, but it presents speculative opinions\u2014like the implied danger of these laws and claims about political motivations\u2014as established facts without sufficient evidence or attribution. This aligns with the friend's classification that the article is \"Fake\" due to presenting unverified opinions as facts."
+                "bot_output": "```json\n{\n  \"classification\": \"Fake\",\n  \"explanation\": \"The article exhibits a highly manipulative tone and style, characteristic of propaganda rather than objective journalism. The title itself, 'Snowflake Trump Actually Screams At White House Televisions, Proving He Is Mentally Unfit To Be President,' uses derogatory language ('Snowflake Trump') and makes a definitive, non-journalistic judgment ('Proving He Is Mentally Unfit'). Throughout the text, the language is emotionally charged and biased, employing terms like 'senile old man' and making a direct call to action ('call for Trump s ouster'). While it cites a Trump tweet and an Associated Press report for specific claims (yelling at televisions), these are used to bolster a broader narrative of mental unfitness that is presented as an undisputed fact. The extraordinary claim that 'Even the Army field manual says that Trump has no business being commander-in-chief' is made without any specific citation or evidence, which is highly suspicious and indicative of an attempt to lend unearned authority to a subjective opinion. The article's primary intent appears to be to manipulate reader perception and advocate for a specific political outcome, rather than to inform neutrally.\"\n}\n```"
             }
         ]
     },
     {
-        "News title": " Trump Blamed Bernie Sanders For Campaign Violence, Here\u2019s His Epic Response",
-        "is_fake": true,
-        "Steps": [
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 0,
-                "step_evaluation_news": false,
-                "step_evaluation_chatbot": null,
-                "bot_output": "Fake\nExplanation: The article presents opinion and subjective interpretation as established facts without attribution (e.g., stating Trump \"instigated\" violence and Sanders \"absolutely crushed Trump's big lie\" as objective truths rather than claims or interpretations)."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 1,
-                "step_evaluation_news": false,
-                "step_evaluation_chatbot": true,
-                "bot_output": "Accept\n\nThe article presents subjective interpretations, such as Trump \"instigating\" violence and Sanders' response \"absolutely crushing\" Trump's lie, as established facts without providing verifiable evidence for these claims. While it reports factual events like Trump's blame and Sanders' statement, the inclusion of unsupported assertions aligns with the classification's critique of presenting opinion as fact."
-            }
-        ]
-    },
-    {
-        "News title": " Democrats Preparing A Coup To Oust Debbie Wasserman-Schultz",
-        "is_fake": true,
-        "Steps": [
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 0,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article attributes all claims to sources (e.g., \"The Hill reported,\" \"one Democratic Senator told The Hill\") and includes denials from other named Senators, presenting a balanced view without stating speculation as fact."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 1,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": true,
-                "bot_output": "Accept. The classification correctly notes that the article attributes claims to sources like The Hill and includes both supporting and denying perspectives, presenting a balanced report without asserting speculation as factual."
-            }
-        ]
-    },
-    {
-        "News title": "Governor of Yemen's interim capital resigns, accuses PM of corruption",
+        "News title": "Democrats protest Senate Republican healthcare secrecy",
         "is_fake": false,
         "Steps": [
             {
@@ -308,59 +102,19 @@
                 "step_num": 0,
                 "step_evaluation_news": true,
                 "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article reports facts (resignation, lack of comment) and clearly attributes all accusations of corruption and other claims to specific individuals or groups, without presenting them as verified facts."
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article demonstrates standard journalistic practices. It reports on a political event (Democratic protests against Republican healthcare secrecy) with a neutral, objective tone. It attributes quotes directly to key figures like Chuck Schumer and Mitch McConnell, presenting both sides of the argument. The language is factual and avoids sensationalism or excessive emotional vocabulary. While it references 'polls have said' without a specific citation, this is acceptable for a news summary and doesn't undermine the overall credibility, especially given the plausible nature of the claims about political maneuvering and legislative debate. The intent is clearly to inform, not to manipulate.\"\n}\n```"
             },
             {
                 "chatbot_name": "Deepseek",
                 "step_num": 1,
                 "step_evaluation_news": true,
                 "step_evaluation_chatbot": true,
-                "bot_output": "Accept. The classification accurately notes that the article reports verifiable facts (e.g., the resignation, lack of comment from officials) and attributes all allegations of corruption to specific sources without presenting them as objective truths."
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article demonstrates standard journalistic practices. It reports on a political event (Democratic protests against Republican healthcare secrecy) with a neutral, objective tone. It attributes quotes directly to key figures like Chuck Schumer and Mitch McConnell, presenting both sides of the argument. The language is factual and avoids sensationalism or excessive emotional vocabulary. While it references 'polls have said' without a specific citation, this is acceptable for a news summary and doesn't undermine the overall credibility, especially given the plausible nature of the claims about political maneuvering and legislative debate. The intent is clearly to inform, not to manipulate.\"\n}\n```"
             }
         ]
     },
     {
-        "News title": "Senator Rand Paul returns to work after being tackled while mowing lawn",
-        "is_fake": false,
-        "Steps": [
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 0,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article reports facts and clearly attributes all claims to specific sources (e.g., Paul's Twitter, court officials, other media reports, specific interviews) without presenting speculation or opinion as established facts."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 1,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": true,
-                "bot_output": "Accept. The article accurately reports verifiable events and statements, consistently attributing information to specific sources such as official statements, court documents, and media reports, without presenting speculation or opinion as established fact."
-            }
-        ]
-    },
-    {
-        "News title": " President Obama Says What Trump Cannot Say Following Murder In Charlottesville",
-        "is_fake": true,
-        "Steps": [
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 0,
-                "step_evaluation_news": false,
-                "step_evaluation_chatbot": null,
-                "bot_output": "Fake\nExplanation: The article presents significant speculative and opinion statements as established facts, such as \"Trump cannot say the words: this was right-wing terrorism by his own supporters,\" and \"It's because he was endorsed by every racist group across the board,\" without verifiable evidence or attribution."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 1,
-                "step_evaluation_news": false,
-                "step_evaluation_chatbot": true,
-                "bot_output": "Accept. The classification accurately identifies that the article presents speculative or opinion-based statements, such as claims about Trump's inability to condemn right-wing terrorism and his endorsement by \"every racist group,\" as established facts without verifiable evidence."
-            }
-        ]
-    },
-    {
-        "News title": " The Federal Election Commission Just Told Trump They\u2019re DONE With His \u2018Voter Fraud\u2019 Lies",
+        "News title": " Spice Company Owner Causes Family Feud When He Calls Trump \u2018Racist\u2019",
         "is_fake": true,
         "Steps": [
             {
@@ -368,199 +122,19 @@
                 "step_num": 0,
                 "step_evaluation_news": true,
                 "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article reports on specific claims made by Trump, a Federal Election Commissioner's demand for evidence, and White House comments, using direct quotes and a tweet to substantiate these factual events, even though it includes strong authorial opinion."
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article reports on a specific event involving a company owner's controversial statements about a political figure and the resulting family and customer reactions. It provides direct quotes from the individual, Bill Penzey Jr., and explicitly cites 'USA Today' as the source for his initial email content, lending credibility to the core claim. It also includes reactions from customers and a named family member (Patty Penzey). While the introductory paragraph has a slightly editorialized tone ('After eight years...Republicans actually elected the most divisive president...'), the bulk of the article focuses on presenting factual details of the controversy, including specific names, company names, and direct quotes. The claims are plausible, not extraordinary, and the reporting style, despite the controversial subject matter, remains largely informative rather than overtly manipulative. The explicit sourcing for a key detail strengthens its credibility.\"\n}\n```"
             },
             {
                 "chatbot_name": "Deepseek",
                 "step_num": 1,
                 "step_evaluation_news": true,
                 "step_evaluation_chatbot": true,
-                "bot_output": "Accept\nExplanation: The classification correctly identifies that the article reports factual events\u2014Trump's voter fraud claims, FEC Commissioner Weintraub's demand for evidence, and White House statements\u2014using verifiable sources like direct quotes and a tweet. It accurately notes the inclusion of authorial opinion without presenting speculation as established fact."
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article reports on a specific event involving a company owner's controversial statements about a political figure and the resulting family and customer reactions. It provides direct quotes from the individual, Bill Penzey Jr., and explicitly cites 'USA Today' as the source for his initial email content, lending credibility to the core claim. It also includes reactions from customers and a named family member (Patty Penzey). While the introductory paragraph has a slightly editorialized tone ('After eight years...Republicans actually elected the most divisive president...'), the bulk of the article focuses on presenting factual details of the controversy, including specific names, company names, and direct quotes. The claims are plausible, not extraordinary, and the reporting style, despite the controversial subject matter, remains largely informative rather than overtly manipulative. The explicit sourcing for a key detail strengthens its credibility.\"\n}\n```"
             }
         ]
     },
     {
-        "News title": " Russian Lawyer Drops Bomb On Donald Trump Jr.; Alleges Direct Pay-To-Play Attempt",
-        "is_fake": true,
-        "Steps": [
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 0,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article clearly attributes claims and allegations to specific sources (e.g., \"According to the lawyer,\" \"Veselnitskaya said,\" \"Source: Newsweek\") and distinguishes them from verifiable facts, without presenting speculation or opinion as established facts."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 1,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": true,
-                "bot_output": "Accept\n\nThe article attributes all key allegations to specific sources such as Natalia Veselnitskaya and Newsweek, using qualifiers like \"alleges,\" \"according to,\" and \"allegedly\" to distinguish reported claims from established facts. While it includes interpretive statements (e.g., \"the intent was pretty clear\"), these are presented as commentary on the sourced allegations, not as verifiable facts asserted without evidence."
-            }
-        ]
-    },
-    {
-        "News title": "New Jersey Governor Christie halts road, bridge projects",
-        "is_fake": false,
-        "Steps": [
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 0,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article reports facts and clearly attributes claims and opinions to their sources without presenting speculation as established facts."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 1,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": true,
-                "bot_output": "Accept\n\nThe article accurately reports verifiable events and financial details, such as Governor Christie's executive order and the status of the Transportation Trust Fund, with all claims and opinions\u2014including the \"pure theater\" comment\u2014clearly attributed to named sources like Reuters, state officials, and lawmakers. No speculative statements are presented as established facts without evidence."
-            }
-        ]
-    },
-    {
-        "News title": " Conservatives Raise Hell Over Obama\u2019s Wedding Ring With Dumbest Conspiracy Ever (SCREENSHOTS)",
-        "is_fake": true,
-        "Steps": [
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 0,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article reports on and attributes various speculative/opinion statements made by others, and it explicitly refutes one of them, without presenting any of these speculative claims as its own established facts."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 1,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": true,
-                "bot_output": "Accept. The article reports on conspiracy theories attributed to conservatives and explicitly refutes the claim about Obama's ring having Arabic inscriptions, without presenting the speculative claims as factual."
-            }
-        ]
-    },
-    {
-        "News title": " Here\u2019s What Happened When Black Protesters Did What The Bundy Terrorists Are Doing (VIDEO)",
-        "is_fake": true,
-        "Steps": [
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 0,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article reports verifiable historical facts about the Harris Neck land dispute and protest, and generally accurate details about the Bundy standoff, while its strong opinions are presented as part of a comparative argument rather than disguised as objective, established facts."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 1,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": true,
-                "bot_output": "Accept\n\nThe historical facts cited about the Harris Neck protest and land dispute, as well as the details of the Bundy standoff, are verifiable and generally accurate. The article's strong opinions are clearly presented as part of a subjective comparison rather than as objective, established facts."
-            }
-        ]
-    },
-    {
-        "News title": "Mistrial declared in corruption case against ex-Los Angeles sheriff",
-        "is_fake": false,
-        "Steps": [
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 0,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article reports factual events from a court case and attributes claims (e.g., from spokesmen, defense, local media) without presenting speculation or opinion as established facts."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 1,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": true,
-                "bot_output": "Accept\n\nThe classification correctly identifies that the article reports factual legal proceedings and attributes specific claims to sources such as court spokesmen, local media, and the defense, without presenting speculation or unverified opinions as established facts. All statements are supported by verifiable events or attributed sources."
-            }
-        ]
-    },
-    {
-        "News title": " Dipsh*t Adjusts Gun He Was Hiding In His SOCK Shoots Himself, Stranger At Graduation Ceremony",
-        "is_fake": true,
-        "Steps": [
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 0,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article reports the core incident as facts attributed to the Augusta Police Chief and KWCH News, and while heavily opinionated, it does not present speculative statements as established facts or assert objective claims contradicted by evidence."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 1,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": true,
-                "bot_output": "Accept. The article accurately reports the factual incident as stated by the Augusta Police Chief and KWCH News, and while it includes strong opinions, these are presented as commentary rather than established facts, with no objective claims contradicted by evidence."
-            }
-        ]
-    },
-    {
-        "News title": " Elizabeth Warren Did NOT Mince Words In Her Reaction To Trump\u2019s Presumptive Nomination",
-        "is_fake": true,
-        "Steps": [
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 0,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article accurately reports Elizabeth Warren's statements and actions, clearly attributing all claims and opinions to her, rather than presenting them as its own established facts."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 1,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": true,
-                "bot_output": "Accept\n\nThe article accurately reports factual events such as Trump's primary victory and Cruz suspending his campaign, and it directly quotes Elizabeth Warren's opinions, clearly attributing them to her without presenting them as the article's own assertions. There is no evidence of speculative or unverified claims being presented as established facts."
-            }
-        ]
-    },
-    {
-        "News title": "Burundi will raise funds from citizens to pay for 2020 election",
-        "is_fake": false,
-        "Steps": [
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 0,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article reports facts and clearly attributes all claims, including government plans and statements from a minister, without presenting speculation or opinion as established facts."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 1,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": true,
-                "bot_output": "Accept\n\nThe article accurately reports the Burundian government's plans to fund the 2020 election through citizen contributions, attributing all key claims to official sources like Minister Pascal Barandagiye and providing verifiable context (e.g., World Bank data). No speculative or opinion statements are presented as established facts without evidence."
-            }
-        ]
-    },
-    {
-        "News title": "Republican Collins will stay in U.S. Senate, focused on healthcare",
-        "is_fake": false,
-        "Steps": [
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 0,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article reports facts and clearly attributes all claims, opinions, and speculative statements to specific individuals without presenting them as established facts."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 1,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": true,
-                "bot_output": "Accept\n\nExplanation: The article accurately reports verifiable events and attributes all statements, opinions, and analyses to specific sources, such as Senator Susan Collins, Professor Mark Brewer, and Senator Mitch McConnell, without presenting speculative or opinion-based content as established fact."
-            }
-        ]
-    },
-    {
-        "News title": " Convicted Felon With A Gun Has Knee-Jerk Reaction That Kills His Own Daughter",
+        "News title": " It\u2019s ON: Comey Refuses To Testify Before Intelligence Committee Unless The Hearing Is Public",
         "is_fake": true,
         "Steps": [
             {
@@ -568,19 +142,73 @@
                 "step_num": 0,
                 "step_evaluation_news": false,
                 "step_evaluation_chatbot": null,
-                "bot_output": "Fake\nExplanation: The article presents speculative and opinion statements about societal issues and gun danger as established facts without verifiable evidence or attribution."
+                "bot_output": "```json\n{\n  \"classification\": \"Fake\",\n  \"explanation\": \"While the article reports on real events and cites some sources (New York Times, NBC News, Ken Dilanian for specific quotes), its overall tone and language are highly opinionated and emotionally charged, straying from neutral journalism. Phrases like 'It's ON', 'this shit to go down in public', 'Trump, who demanded a loyalty pledge multiple times', 'The Donald's Nixonian outburst reveals that he's incredibly nervous' use informal, interpretive, and loaded vocabulary. These elements suggest an intent to manipulate the reader's perception rather than purely inform, aligning with the characteristics of 'Fake' according to the guidelines regarding manipulative tone and style.\"\n}\n```"
             },
             {
                 "chatbot_name": "Deepseek",
                 "step_num": 1,
+                "step_evaluation_news": null,
+                "step_evaluation_chatbot": false,
+                "bot_output": "```json\n{\n  \"classification\": \"Fake\",\n  \"explanation\": \"While the article reports on real events and cites some sources (New York Times, NBC News, Ken Dilanian for specific quotes), its overall tone and language are highly opinionated and emotionally charged, straying from neutral journalism. Phrases like 'It's ON', 'this shit to go down in public', 'Trump, who demanded a loyalty pledge multiple times', 'The Donald's Nixonian outburst reveals that he's incredibly nervous' use informal, interpretive, and loaded vocabulary. These elements suggest an intent to manipulate the reader's perception rather than purely inform, aligning with the characteristics of 'Fake' according to the guidelines regarding manipulative tone and style.\"\n}\n```"
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 2,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": null,
+                "bot_output": "False\nExplanation: The article presents interpretive statements, such as claiming Trump's outburst reveals nervousness, as factual assertions without verifiable evidence."
+            },
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 3,
                 "step_evaluation_news": false,
                 "step_evaluation_chatbot": true,
-                "bot_output": "Accept\n\nThe article reports factual events such as the shooting and charges, but it also includes speculative statements like \"this kind of thing is a growing problem\" and opinion-based conclusions such as \"his daughter would still be alive if he hadn\u2019t shot first and thought later,\" which are presented without verifiable evidence or attribution. This matches the classification's claim that speculative and opinion statements are presented as established facts."
+                "bot_output": "False\nExplanation: The article presents interpretive statements, such as claiming Trump's outburst reveals nervousness, as factual assertions without verifiable evidence."
             }
         ]
     },
     {
-        "News title": " Armed White Thugs Hunt Down Black Teen Until He Collapses And Dies",
+        "News title": "House Republicans propose to scrap $7,500 electric vehicle credit",
+        "is_fake": false,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article demonstrates several hallmarks of credible journalism. It is attributed to Reuters, a reputable news agency. The tone is neutral and informative, presenting a proposed legislative change along with reactions from various stakeholders, including automakers (General Motors, Tesla, Nissan), industry trade groups (Alliance of Automobile Manufacturers), and environmental organizations (National Resources Defense Council). It provides specific details like the proposed credit amount ($7,500), the current phase-out mechanism, and the potential financial impact on vehicle prices and sales. The article also includes stock market reactions and historical context (Obama's prior proposal). The claims are plausible, and the reporting style is consistent with standard news practices, focusing on factual reporting and quoting diverse perspectives without exhibiting manipulative or overly emotional language.\"\n}\n```"
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article demonstrates several hallmarks of credible journalism. It is attributed to Reuters, a reputable news agency. The tone is neutral and informative, presenting a proposed legislative change along with reactions from various stakeholders, including automakers (General Motors, Tesla, Nissan), industry trade groups (Alliance of Automobile Manufacturers), and environmental organizations (National Resources Defense Council). It provides specific details like the proposed credit amount ($7,500), the current phase-out mechanism, and the potential financial impact on vehicle prices and sales. The article also includes stock market reactions and historical context (Obama's prior proposal). The claims are plausible, and the reporting style is consistent with standard news practices, focusing on factual reporting and quoting diverse perspectives without exhibiting manipulative or overly emotional language.\"\n}\n```"
+            }
+        ]
+    },
+    {
+        "News title": "Ryan slams Trump 'star' tweet",
+        "is_fake": false,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article demonstrates a neutral, informative tone, characteristic of standard news reporting. It cites specific individuals (Paul Ryan, Donald Trump, Kevin McCarthy) and events, including the radio station (WTMJ) where Ryan's interview took place and the availability of audio and transcripts. The claims are plausible, detailing political discourse and reactions to a controversial social media post. There are no logical fallacies, contradictions, or extraordinary claims presented without attribution. The article's intent appears to be to inform, not to manipulate.\"\n}\n```"
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article demonstrates a neutral, informative tone, characteristic of standard news reporting. It cites specific individuals (Paul Ryan, Donald Trump, Kevin McCarthy) and events, including the radio station (WTMJ) where Ryan's interview took place and the availability of audio and transcripts. The claims are plausible, detailing political discourse and reactions to a controversial social media post. There are no logical fallacies, contradictions, or extraordinary claims presented without attribution. The article's intent appears to be to inform, not to manipulate.\"\n}\n```"
+            }
+        ]
+    },
+    {
+        "News title": "COMEDIAN SHOCKS LEFTIST COLLEGE STUDENTS With Best Liberal Smackdown You Have EVER Seen!\u2026MUST Watch VIDEO!",
         "is_fake": true,
         "Steps": [
             {
@@ -588,19 +216,33 @@
                 "step_num": 0,
                 "step_evaluation_news": false,
                 "step_evaluation_chatbot": null,
-                "bot_output": "Fake\nExplanation: The article presents speculative political claims and opinions about future events and motivations (e.g., Trump's alleged encouragement of violence, the thoughts of white supremacists, the only way white supremacists can kill) as established facts without verifiable evidence."
+                "bot_output": "{\"classification\": \"Fake\", \"explanation\": \"The article uses highly emotional, sensationalist, and partisan language from the title ('SHOCKS,' 'Best Liberal Smackdown You Have EVER Seen!,' 'MUST Watch VIDEO!') through the entire description. Words like 'LOUD, OBNOXIOUS liberals,' 'shame and disgrace conservatives,' 'fight back against,' and 'mercilessly tore into' indicate a clear intent to manipulate the reader's emotions and align them with a specific political viewpoint, rather than to inform objectively. While it describes a plausible event and quotes a public figure, the overall tone and style are characteristic of propaganda or clickbait, designed to provoke a strong reaction and rally a specific audience, which falls under the criteria for 'Fake' content as it prioritizes manipulation over neutral reporting.\"}"
             },
             {
                 "chatbot_name": "Deepseek",
                 "step_num": 1,
                 "step_evaluation_news": false,
                 "step_evaluation_chatbot": true,
-                "bot_output": "Accept\n\nThe classification correctly identifies that the article intersperses factual reporting of the incident with speculative political claims and opinions (e.g., predictions about future violence under Trump, assertions about white supremacists' motivations) presented as established facts without verifiable evidence. This aligns with the evaluation criteria focusing on factual accuracy and the presentation of unverified statements as facts."
+                "bot_output": "{\"classification\": \"Fake\", \"explanation\": \"The article uses highly emotional, sensationalist, and partisan language from the title ('SHOCKS,' 'Best Liberal Smackdown You Have EVER Seen!,' 'MUST Watch VIDEO!') through the entire description. Words like 'LOUD, OBNOXIOUS liberals,' 'shame and disgrace conservatives,' 'fight back against,' and 'mercilessly tore into' indicate a clear intent to manipulate the reader's emotions and align them with a specific political viewpoint, rather than to inform objectively. While it describes a plausible event and quotes a public figure, the overall tone and style are characteristic of propaganda or clickbait, designed to provoke a strong reaction and rally a specific audience, which falls under the criteria for 'Fake' content as it prioritizes manipulation over neutral reporting.\"}"
+            },
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": null,
+                "bot_output": "{\"classification\": \"Fake\", \"explanation\": \"The article uses highly emotional, sensational, and partisan language throughout its title and description. Phrases like 'SHOCKS LEFTIST COLLEGE STUDENTS,' 'Best Liberal Smackdown You Have EVER Seen!,' 'MUST Watch VIDEO!,' 'LOUD, OBNOXIOUS liberals,' 'mercilessly tore into so-called social justice warriors,' and 'fight back against' indicate a clear intent to manipulate and provoke rather than inform neutrally. The text explicitly states an agenda: 'should be an example for every conservative in America on how to handle the well-trained Left!' and 'should be used in training sessions for conservatives.' This goes beyond journalism and into advocacy or propaganda. The tone is aggressive, accusatory, and designed to rally a specific audience against another, which is a hallmark of manipulative content, not credible news reporting.\"}"
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": true,
+                "bot_output": "{\"classification\": \"Fake\", \"explanation\": \"The article uses highly emotional, sensational, and partisan language throughout its title and description. Phrases like 'SHOCKS LEFTIST COLLEGE STUDENTS,' 'Best Liberal Smackdown You Have EVER Seen!,' 'MUST Watch VIDEO!,' 'LOUD, OBNOXIOUS liberals,' 'mercilessly tore into so-called social justice warriors,' and 'fight back against' indicate a clear intent to manipulate and provoke rather than inform neutrally. The text explicitly states an agenda: 'should be an example for every conservative in America on how to handle the well-trained Left!' and 'should be used in training sessions for conservatives.' This goes beyond journalism and into advocacy or propaganda. The tone is aggressive, accusatory, and designed to rally a specific audience against another, which is a hallmark of manipulative content, not credible news reporting.\"}"
             }
         ]
     },
     {
-        "News title": "Federal judge strikes down parts of Wisconsin voter laws",
+        "News title": "Japanese cosmetics maker Pola says sorry for racist poster",
         "is_fake": false,
         "Steps": [
             {
@@ -608,19 +250,19 @@
                 "step_num": 0,
                 "step_evaluation_news": true,
                 "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article reports factual judicial rulings and clearly attributes all opinions, claims, and expectations to their sources without presenting speculation as verified fact."
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article exhibits characteristics of a standard news report. It maintains a neutral and objective tone, reporting facts about a company's apology for a racist poster, the social media reaction, and the broader context of Japanese tourism and relations with China. It includes direct quotes from Pola's statement and refers to government data for tourism figures. The claims made are plausible and consistent with typical news reporting, and there are no signs of manipulative language, logical fallacies, or extraordinary unsubstantiated claims. The absence of specific links to social media posts or original documents is normal for a concise news summary from a reputable agency like Reuters, which implies such details would be verifiable if one were to delve deeper into the original report.\"\n}\n```"
             },
             {
                 "chatbot_name": "Deepseek",
                 "step_num": 1,
                 "step_evaluation_news": true,
                 "step_evaluation_chatbot": true,
-                "bot_output": "Accept  \nThe classification is correct because the article accurately reports on a real judicial ruling and attributes all opinions and speculative statements, such as the expected impact on elections, to appropriate sources or frames them as expectations rather than established facts."
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article exhibits characteristics of a standard news report. It maintains a neutral and objective tone, reporting facts about a company's apology for a racist poster, the social media reaction, and the broader context of Japanese tourism and relations with China. It includes direct quotes from Pola's statement and refers to government data for tourism figures. The claims made are plausible and consistent with typical news reporting, and there are no signs of manipulative language, logical fallacies, or extraordinary unsubstantiated claims. The absence of specific links to social media posts or original documents is normal for a concise news summary from a reputable agency like Reuters, which implies such details would be verifiable if one were to delve deeper into the original report.\"\n}\n```"
             }
         ]
     },
     {
-        "News title": "Lawsuit says North Carolina bathroom law still harmful",
+        "News title": "Texas governor calls legislative session; could include bathroom bill",
         "is_fake": false,
         "Steps": [
             {
@@ -628,19 +270,79 @@
                 "step_num": 0,
                 "step_evaluation_news": true,
                 "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article reports facts about a lawsuit and legislation, clearly attributing all claims, opinions, and statements to specific sources like advocacy groups, plaintiffs, and spokespeople."
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article exhibits a neutral, objective tone, reporting on a political development in Texas. It presents various perspectives, including statements from Governor Greg Abbott, the views of critics, political and business analysts, and different factions within the Republican party. It cites specific entities like the Texas Association of Business and references a comparable situation in North Carolina, lending credibility to its claims. The language is factual and descriptive, devoid of sensationalism or heavily emotional vocabulary. The claims made are plausible within the context of state-level politics in the U.S. and align with standard journalistic reporting practices.\"\n}\n```"
             },
             {
                 "chatbot_name": "Deepseek",
                 "step_num": 1,
                 "step_evaluation_news": true,
                 "step_evaluation_chatbot": true,
-                "bot_output": "Accept\nThe article is a factual news report from Reuters that accurately describes ongoing litigation and legislative actions in North Carolina. All claims, including those about discrimination and legal effects, are properly attributed to advocacy groups, plaintiffs, or officials, with no unverified assertions presented as established facts."
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article exhibits a neutral, objective tone, reporting on a political development in Texas. It presents various perspectives, including statements from Governor Greg Abbott, the views of critics, political and business analysts, and different factions within the Republican party. It cites specific entities like the Texas Association of Business and references a comparable situation in North Carolina, lending credibility to its claims. The language is factual and descriptive, devoid of sensationalism or heavily emotional vocabulary. The claims made are plausible within the context of state-level politics in the U.S. and align with standard journalistic reporting practices.\"\n}\n```"
             }
         ]
     },
     {
-        "News title": "STEVE BANNON JUST MADE A BIG ANNOUNCEMENT About What He\u2019ll Be Doing After Leaving The White House\u2026And It\u2019s Very Bad News For The Left \u00a0",
+        "News title": "White House urges ban on non-compete agreements for many workers",
+        "is_fake": false,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article exhibits a neutral and informative tone, characteristic of standard journalism. It reports on a call to action from the Obama administration regarding non-compete agreements, including specific statements attributed to Vice President Joe Biden and statistics from the White House. It also provides a counter-perspective from the National Federation of Independent Business and relevant legal context. The claims are plausible, well-attributed, and presented in a balanced manner without sensationalism or emotional language. The absence of direct hyperlinks is normal for a concise news report, and the attributions to named sources (Reuters, Obama administration, VP Biden, White House, Beth Milito) lend credibility.\"\n}\n```"
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article exhibits a neutral and informative tone, characteristic of standard journalism. It reports on a call to action from the Obama administration regarding non-compete agreements, including specific statements attributed to Vice President Joe Biden and statistics from the White House. It also provides a counter-perspective from the National Federation of Independent Business and relevant legal context. The claims are plausible, well-attributed, and presented in a balanced manner without sensationalism or emotional language. The absence of direct hyperlinks is normal for a concise news report, and the attributions to named sources (Reuters, Obama administration, VP Biden, White House, Beth Milito) lend credibility.\"\n}\n```"
+            }
+        ]
+    },
+    {
+        "News title": "Pot legalization supporters launch California ballot campaign",
+        "is_fake": false,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article demonstrates characteristics of standard journalistic reporting. It objectively presents information about a ballot campaign, including specific figures (signature count), key individuals involved (Lt. Gov. Gavin Newsom, Sean Parker), details of the proposed measure, historical context, and arguments from both supporters and opponents. The tone is neutral and informative, without any emotionally charged or manipulative language. Attributions are present (e.g., 'Newsom told a San Francisco news conference'), and the claims are plausible and consistent with typical news reporting on political initiatives.\"\n}\n```"
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article demonstrates characteristics of standard journalistic reporting. It objectively presents information about a ballot campaign, including specific figures (signature count), key individuals involved (Lt. Gov. Gavin Newsom, Sean Parker), details of the proposed measure, historical context, and arguments from both supporters and opponents. The tone is neutral and informative, without any emotionally charged or manipulative language. Attributions are present (e.g., 'Newsom told a San Francisco news conference'), and the claims are plausible and consistent with typical news reporting on political initiatives.\"\n}\n```"
+            }
+        ]
+    },
+    {
+        "News title": "Senate committee questions Trump's nuclear authority",
+        "is_fake": false,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "{\"classification\": \"True\", \"explanation\": \"The article adopts a neutral, informative tone, reporting on a specific event \u2013 a U.S. Senate committee hearing. It attributes all statements and concerns to named individuals (senators, a retired general, the president), which is a hallmark of standard journalism. The claims made are plausible within the context of political discussions regarding presidential powers and international tensions. There are no logical fallacies, contradictions, or extraordinary claims presented without implicit or explicit sourcing (quotes from participants in a public hearing). The style is factual and avoids sensational or emotionally charged language, indicating an intent to inform rather than manipulate.\"}"
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "{\"classification\": \"True\", \"explanation\": \"The article adopts a neutral, informative tone, reporting on a specific event \u2013 a U.S. Senate committee hearing. It attributes all statements and concerns to named individuals (senators, a retired general, the president), which is a hallmark of standard journalism. The claims made are plausible within the context of political discussions regarding presidential powers and international tensions. There are no logical fallacies, contradictions, or extraordinary claims presented without implicit or explicit sourcing (quotes from participants in a public hearing). The style is factual and avoids sensational or emotionally charged language, indicating an intent to inform rather than manipulate.\"}"
+            }
+        ]
+    },
+    {
+        "News title": " Cruz\u2019s Attempt To Act Tough Hilariously Backfires When Reporter Asks Him Brutal Follow-Up (VIDEO)",
         "is_fake": true,
         "Steps": [
             {
@@ -648,19 +350,33 @@
                 "step_num": 0,
                 "step_evaluation_news": false,
                 "step_evaluation_chatbot": null,
-                "bot_output": "Fake\nExplanation: The article presents several opinion statements and speculations, such as \"Very Bad News For The Left\" and \"Conservatives need someone like Steve Bannon more than ever,\" as established facts without clear attribution or verifiable evidence."
+                "bot_output": "```json\n{\n  \"classification\": \"Fake\",\n  \"explanation\": \"The article uses highly emotional, biased, and judgmental language throughout, starting with the title ('Hilariously Backfires,' 'Brutal Follow-Up') and continuing in the description ('Poor, poor Ted Cruz,' 'sniveling coward,' 'meddling NBC reporter,' 'massive elephant in the room,' 'flailing response speaks volumes,' 'clearly unimpressed Jackson,' 'temporarily speechless, before weakly saying,' 'grovel at Trump s feet'). This heavy reliance on opinionated vocabulary and subjective interpretations ('practiced his best tough guy face in the mirror,' 'Cruz would live to regret tweets like this one') aims to manipulate the reader's perception and emotional response rather than present information neutrally. While it quotes some direct dialogue, the overall tone and style are characteristic of sensationalism and clickbait, not objective journalism.\"\n}\n```"
             },
             {
                 "chatbot_name": "Deepseek",
                 "step_num": 1,
+                "step_evaluation_news": null,
+                "step_evaluation_chatbot": false,
+                "bot_output": "```json\n{\n  \"classification\": \"Fake\",\n  \"explanation\": \"The article uses highly emotional, biased, and judgmental language throughout, starting with the title ('Hilariously Backfires,' 'Brutal Follow-Up') and continuing in the description ('Poor, poor Ted Cruz,' 'sniveling coward,' 'meddling NBC reporter,' 'massive elephant in the room,' 'flailing response speaks volumes,' 'clearly unimpressed Jackson,' 'temporarily speechless, before weakly saying,' 'grovel at Trump s feet'). This heavy reliance on opinionated vocabulary and subjective interpretations ('practiced his best tough guy face in the mirror,' 'Cruz would live to regret tweets like this one') aims to manipulate the reader's perception and emotional response rather than present information neutrally. While it quotes some direct dialogue, the overall tone and style are characteristic of sensationalism and clickbait, not objective journalism.\"\n}\n```"
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 2,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": null,
+                "bot_output": "False  \nExplanation: The article's claims are not supported by verifiable facts and include sensationalized interpretations that deviate from objective reporting."
+            },
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 3,
                 "step_evaluation_news": false,
                 "step_evaluation_chatbot": true,
-                "bot_output": "Accept\n\nThe article contains verifiable factual elements, such as Steve Bannon leaving the White House and returning to Breitbart News, supported by attributed statements. However, it also presents subjective opinions like \"Very Bad News For The Left\" and \"Conservatives need someone like Steve Bannon more than ever\" as established facts without clear attribution or verifiable evidence. The classification correctly identifies this blending of speculation with factual content."
+                "bot_output": "False  \nExplanation: The article's claims are not supported by verifiable facts and include sensationalized interpretations that deviate from objective reporting."
             }
         ]
     },
     {
-        "News title": "U.S., Germany eye ways to deepen cyber collaboration",
+        "News title": "Protesters nationwide denounce big money in U.S. politics",
         "is_fake": false,
         "Steps": [
             {
@@ -668,19 +384,19 @@
                 "step_num": 0,
                 "step_evaluation_news": true,
                 "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article reports on official statements and agreements, quoting a named official, without presenting speculation or opinion as established facts."
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article demonstrates characteristics of standard journalistic reporting. It maintains a neutral and objective tone, focusing on relaying facts about protests across the U.S. It specifies locations (Boston, Washington), organizations involved (Reuters, Represent.Us, Democracy Spring), and actions taken (dumping faux contributions, arrests, marching). It attributes quotes to named individuals and police, and provides specific numbers for arrests. The claims made are plausible and not extraordinary. The absence of external links or explicit citations within this short summary is typical for a wire service report, which is expected to be based on direct reporting and verification. There is no manipulative language, logical fallacies, or internal contradictions.\"\n}\n```"
             },
             {
                 "chatbot_name": "Deepseek",
                 "step_num": 1,
                 "step_evaluation_news": true,
                 "step_evaluation_chatbot": true,
-                "bot_output": "Accept\nThe classification is correct because the article is based on direct quotes from a named official and reports on verifiable events and agreements, without presenting speculation or opinion as established fact."
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article demonstrates characteristics of standard journalistic reporting. It maintains a neutral and objective tone, focusing on relaying facts about protests across the U.S. It specifies locations (Boston, Washington), organizations involved (Reuters, Represent.Us, Democracy Spring), and actions taken (dumping faux contributions, arrests, marching). It attributes quotes to named individuals and police, and provides specific numbers for arrests. The claims made are plausible and not extraordinary. The absence of external links or explicit citations within this short summary is typical for a wire service report, which is expected to be based on direct reporting and verification. There is no manipulative language, logical fallacies, or internal contradictions.\"\n}\n```"
             }
         ]
     },
     {
-        "News title": " Bette Midler Just Ruined Trump\u2019s Day With A Brutal Twitter Smackdown (TWEETS)",
+        "News title": " Watch Darrel Issa Get Booed After Being A Total D*ck To A Constituent (VIDEO)",
         "is_fake": true,
         "Steps": [
             {
@@ -688,139 +404,19 @@
                 "step_num": 0,
                 "step_evaluation_news": false,
                 "step_evaluation_chatbot": null,
-                "bot_output": "Fake\nExplanation: The article presents speculative statements about Donald Trump having a \"cocaine problem\" as established facts or highly probable scenarios without verifiable evidence."
+                "bot_output": "```json\n{\n  \"classification\": \"Fake\",\n  \"explanation\": \"The article exhibits a highly manipulative tone, partisan bias, and makes broad, unsubstantiated claims. The title itself ('Watch Darrel Issa Get Booed After Being A Total D*ck To A Constituent (VIDEO)') uses inflammatory language, immediately indicating an intent beyond neutral reporting. The opening paragraph ('There may have been a time, many years ago, when the Republican party gave a crap about its constituents, but those days are long gone.') is a clear generalization and an opinion, not a journalistic statement. While it describes a specific incident at a town hall and cites 'Raw Story' for the event, the article then extends this single event into broad condemnations of an entire political party ('Sadly, this seems to be common behavior among Republicans. Dissent is no longer welcome.'). It makes extraordinary claims, such as 'In North Dakota, for example, Republicans introduced a bill that would make it legal to run down protesters with cars,' without providing specific evidence (like a bill number or direct link) for such a shocking assertion. The persistent use of emotionally charged language ('total d*ck,' 'frightening,' 'Oval Office occupier') and generalizations ('his party follows his example') signifies an intent to manipulate the reader's opinion rather than inform objectively. Therefore, despite the plausible description of a specific event (which is framed to support the overarching negative narrative), the overwhelming tone and unsubstantiated generalizations classify this as 'Fake' for its credibility as news.\"\n}\n```"
             },
             {
                 "chatbot_name": "Deepseek",
                 "step_num": 1,
                 "step_evaluation_news": false,
                 "step_evaluation_chatbot": true,
-                "bot_output": "Accept\n\nThe article asserts \"Donald Trump has a cocaine problem\" as a factual claim without providing any verifiable evidence, instead basing it on speculation from a debate sniffling incident and humorous tweets. This aligns with the classification's point that speculative statements are presented as established facts."
+                "bot_output": "```json\n{\n  \"classification\": \"Fake\",\n  \"explanation\": \"The article exhibits a highly manipulative tone, partisan bias, and makes broad, unsubstantiated claims. The title itself ('Watch Darrel Issa Get Booed After Being A Total D*ck To A Constituent (VIDEO)') uses inflammatory language, immediately indicating an intent beyond neutral reporting. The opening paragraph ('There may have been a time, many years ago, when the Republican party gave a crap about its constituents, but those days are long gone.') is a clear generalization and an opinion, not a journalistic statement. While it describes a specific incident at a town hall and cites 'Raw Story' for the event, the article then extends this single event into broad condemnations of an entire political party ('Sadly, this seems to be common behavior among Republicans. Dissent is no longer welcome.'). It makes extraordinary claims, such as 'In North Dakota, for example, Republicans introduced a bill that would make it legal to run down protesters with cars,' without providing specific evidence (like a bill number or direct link) for such a shocking assertion. The persistent use of emotionally charged language ('total d*ck,' 'frightening,' 'Oval Office occupier') and generalizations ('his party follows his example') signifies an intent to manipulate the reader's opinion rather than inform objectively. Therefore, despite the plausible description of a specific event (which is framed to support the overarching negative narrative), the overwhelming tone and unsubstantiated generalizations classify this as 'Fake' for its credibility as news.\"\n}\n```"
             }
         ]
     },
     {
-        "News title": "U.S. House committee launches probe of Allergan patent deal",
-        "is_fake": false,
-        "Steps": [
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 0,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article reports factual events and clearly attributes all claims, opinions, and speculative statements to their sources without presenting them as established facts."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 1,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": true,
-                "bot_output": "Accept\n\nExplanation: The article reports verifiable events such as the House committee probe and the patent transfer deal, and consistently attributes opinions, claims, and speculative statements to specific sources (e.g., representatives, Allergan, legal experts, Mylan), without presenting them as unverified facts."
-            }
-        ]
-    },
-    {
-        "News title": "Oregon governor signs tiered minimum wage measure into law",
-        "is_fake": false,
-        "Steps": [
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 0,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article reports factual events and clearly attributes opinions or predictions to specific individuals or groups (e.g., \"Supporters say...\", \"Opponents say...\", \"Brown said...\", \"Oregon Republicans who opposed the increase predicted...\")."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 1,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": true,
-                "bot_output": "Accept  \nThe classification correctly identifies that the article reports verifiable facts (e.g., wage increases, legislative actions) and attributes opinions or predictions to specific sources, avoiding presentation of speculation as established fact."
-            }
-        ]
-    },
-    {
-        "News title": "New Jersey governor's race opens as Christie's approval slumps",
-        "is_fake": false,
-        "Steps": [
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 0,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article reports factual events and clearly attributes all opinions, predictions, and poll data to specific individuals or political observers, without presenting speculation as established facts."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 1,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": true,
-                "bot_output": "Accept. The article accurately reports factual events like Phil Murphy's candidacy and Christie's term limits, and it attributes all opinions, predictions, and poll data to specific sources such as political observers and pollsters, without presenting speculation as established fact."
-            }
-        ]
-    },
-    {
-        "News title": "Six years after BP spill, U.S. sets new offshore oil safety rules",
-        "is_fake": false,
-        "Steps": [
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 0,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article reports verifiable facts and clearly attributes all statements, opinions, and estimates to their respective sources without presenting speculation as established fact."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 1,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": true,
-                "bot_output": "Accept\n\nThe article accurately reports factual events and attributes all statements, opinions, and estimates to specific sources, such as the Interior Department, officials, and industry groups, without presenting speculation as established fact. The classification correctly reflects this."
-            }
-        ]
-    },
-    {
-        "News title": "India's Modi fights to protect home base in election",
-        "is_fake": false,
-        "Steps": [
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 0,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article reports facts and clearly attributes all claims, speculation, and opinions to specific sources or polls, without presenting them as established facts."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 1,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": true,
-                "bot_output": "Accept. The article reports factual events like Modi's campaigning and election details, attributes poll results and opinions to specific sources (e.g., ABP-CDS poll, Amit Shah, Jagdip Desai), and does not present speculation as established fact without attribution."
-            }
-        ]
-    },
-    {
-        "News title": "Cuba breaks up weekly dissident march hours before Obama visit",
-        "is_fake": false,
-        "Steps": [
-            {
-                "chatbot_name": "Gemini",
-                "step_num": 0,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": null,
-                "bot_output": "True\nExplanation: The article reports facts and clearly attributes claims to their sources without presenting speculation or opinion as verified facts."
-            },
-            {
-                "chatbot_name": "Deepseek",
-                "step_num": 1,
-                "step_evaluation_news": true,
-                "step_evaluation_chatbot": true,
-                "bot_output": "Accept\n\nThe assistant's classification is correct because the article objectively reports events such as the march and detentions, attributing statements (e.g., detention statistics to the dissident commission) and presenting opposing viewpoints (e.g., Cuban government and dissident perspectives) without asserting speculative or unverified claims as facts."
-            }
-        ]
-    },
-    {
-        "News title": " Poll: Clinton Leads Trump By 10 Points, Obama\u2019s Approval Rating Skyrockets",
+        "News title": " Ted Cruz Threatens Voters: \u2018Every Vote For Donald Trump Is A Vote For Hillary Clinton\u2019 (AUDIO)",
         "is_fake": true,
         "Steps": [
             {
@@ -828,14 +424,399 @@
                 "step_num": 0,
                 "step_evaluation_news": false,
                 "step_evaluation_chatbot": null,
-                "bot_output": "Fake\nExplanation: The article presents speculative claims, such as CNN \"cooking the polls\" and definitive statements about a \"landslide\" victory and \"the only thing\" preventing it, as established facts without verifiable evidence."
+                "bot_output": "```json\n{\n  \"classification\": \"Fake\",\n  \"explanation\": \"The article uses a genuine quote from Ted Cruz as a starting point, which is a common tactic. However, the vast majority of the content consists of highly biased commentary, speculative predictions presented as fact, and emotionally charged language. Words and phrases like 'Threatens Voters,' 'must really be getting nervous,' 'stupid enough,' 'sweep the debate floor,' 'destroying him in the polls,' 'disgraced candidate,' 'wishful thinking,' 'rant,' 'dangerous Trump,' 'desperate,' 'grasping at straws,' 'no match,' 'making each other look like fools,' and 'GOP will have earned this loss' are all indicative of a manipulative tone. The author's strong opinions and predictions about election outcomes ('Democrats are going to have this election whether they like it or not') are presented as definitive truths, not objective analysis. This style aims to influence reader opinion rather than provide neutral information.\"\n}\n```"
             },
             {
                 "chatbot_name": "Deepseek",
                 "step_num": 1,
                 "step_evaluation_news": false,
                 "step_evaluation_chatbot": true,
-                "bot_output": "Accept\n\nThe article includes unverified claims such as CNN \"cooking the polls\" and presents speculative statements about a \"landslide\" victory as established facts without providing evidence, aligning with the classification's critique of speculative content presented as factual."
+                "bot_output": "```json\n{\n  \"classification\": \"Fake\",\n  \"explanation\": \"The article uses a genuine quote from Ted Cruz as a starting point, which is a common tactic. However, the vast majority of the content consists of highly biased commentary, speculative predictions presented as fact, and emotionally charged language. Words and phrases like 'Threatens Voters,' 'must really be getting nervous,' 'stupid enough,' 'sweep the debate floor,' 'destroying him in the polls,' 'disgraced candidate,' 'wishful thinking,' 'rant,' 'dangerous Trump,' 'desperate,' 'grasping at straws,' 'no match,' 'making each other look like fools,' and 'GOP will have earned this loss' are all indicative of a manipulative tone. The author's strong opinions and predictions about election outcomes ('Democrats are going to have this election whether they like it or not') are presented as definitive truths, not objective analysis. This style aims to influence reader opinion rather than provide neutral information.\"\n}\n```"
+            }
+        ]
+    },
+    {
+        "News title": "U.S. Navy, shipbuilders ready for Trump's expansion plan",
+        "is_fake": false,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article demonstrates standard journalistic practices. It clearly attributes information to specific, high-ranking sources (Chief of Naval Operations Admiral John Richardson and Huntington Ingalls Industries Inc CEO Mike Petters), providing direct quotes from interviews. The tone is neutral and informative, avoiding emotional or sensational language. It discusses plausible claims about the U.S. arms industry's readiness for a potential Navy expansion, while also acknowledging potential challenges such as funding, staffing, and training. The context of Trump's campaign promises and the shadow of sequestration are presented factually. There are no logical fallacies, contradictions, or extraordinary claims without supporting expert statements. The reporting style is consistent with a credible news source like Reuters.\"\n}\n```"
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article demonstrates standard journalistic practices. It clearly attributes information to specific, high-ranking sources (Chief of Naval Operations Admiral John Richardson and Huntington Ingalls Industries Inc CEO Mike Petters), providing direct quotes from interviews. The tone is neutral and informative, avoiding emotional or sensational language. It discusses plausible claims about the U.S. arms industry's readiness for a potential Navy expansion, while also acknowledging potential challenges such as funding, staffing, and training. The context of Trump's campaign promises and the shadow of sequestration are presented factually. There are no logical fallacies, contradictions, or extraordinary claims without supporting expert statements. The reporting style is consistent with a credible news source like Reuters.\"\n}\n```"
+            }
+        ]
+    },
+    {
+        "News title": " Obama Uses Ted Cruz\u2019s Own Father To Prove Cruz Is A Morally Reprehensible Bigot (VIDEO)",
+        "is_fake": true,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": null,
+                "bot_output": "{\"classification\": \"Fake\", \"explanation\": \"The article's tone is overtly biased and uses highly charged, emotional language throughout (e.g., 'appalling calls,' 'ugly anti-Muslim policy positions,' 'sick irony,' 'unapologetic hypocrite,' 'sickening vision,' 'radical worldview,' 'bigotry'). The title itself ('Obama Uses Ted Cruz\u2019s Own Father To Prove Cruz Is A Morally Reprehensible Bigot') is accusatory and goes beyond reporting. The text explicitly states political opinions ('Neither has any place in the White House') rather than simply presenting facts. While it includes an embedded tweet from Fox News which provides a direct quote from Obama, the surrounding narrative and interpretation are heavily manipulative and intended to persuade the reader against Ted Cruz, rather than provide neutral information. The article functions as a highly opinionated political commentary or attack piece, not as standard journalism.\"}"
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": true,
+                "bot_output": "{\"classification\": \"Fake\", \"explanation\": \"The article's tone is overtly biased and uses highly charged, emotional language throughout (e.g., 'appalling calls,' 'ugly anti-Muslim policy positions,' 'sick irony,' 'unapologetic hypocrite,' 'sickening vision,' 'radical worldview,' 'bigotry'). The title itself ('Obama Uses Ted Cruz\u2019s Own Father To Prove Cruz Is A Morally Reprehensible Bigot') is accusatory and goes beyond reporting. The text explicitly states political opinions ('Neither has any place in the White House') rather than simply presenting facts. While it includes an embedded tweet from Fox News which provides a direct quote from Obama, the surrounding narrative and interpretation are heavily manipulative and intended to persuade the reader against Ted Cruz, rather than provide neutral information. The article functions as a highly opinionated political commentary or attack piece, not as standard journalism.\"}"
+            }
+        ]
+    },
+    {
+        "News title": "Peru and Colombia vow to stand with Mexico after row with Trump",
+        "is_fake": false,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article exhibits a neutral and objective tone, reporting directly on statements made by Peruvian and Colombian presidents regarding support for Mexico in light of early Trump administration policies. It clearly attributes quotes and provides context without resorting to sensational or manipulative language. The claims are plausible given the political climate at the time, and the explicit mention of 'LIMA (Reuters)' indicates a standard news agency source. There are no logical fallacies, contradictions, or extraordinary claims presented without appropriate attribution or context, aligning with the characteristics of factual reporting.\"\n}\n```"
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article exhibits a neutral and objective tone, reporting directly on statements made by Peruvian and Colombian presidents regarding support for Mexico in light of early Trump administration policies. It clearly attributes quotes and provides context without resorting to sensational or manipulative language. The claims are plausible given the political climate at the time, and the explicit mention of 'LIMA (Reuters)' indicates a standard news agency source. There are no logical fallacies, contradictions, or extraordinary claims presented without appropriate attribution or context, aligning with the characteristics of factual reporting.\"\n}\n```"
+            }
+        ]
+    },
+    {
+        "News title": " Ninety-Year-Old Senator Finds Love Again, This Time With A Man",
+        "is_fake": true,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article demonstrates a neutral and informative tone, primarily summarizing and quoting an op-ed published by the New York Times from former Pennsylvania senator Harris Wofford. It explicitly cites its source for the claims made (the NYT op-ed), providing strong internal evidence. The claims themselves, while a touching personal story, are plausible, and the language used does not rely on sensationalism or heavily emotional vocabulary from the article's author. The style aligns with standard reporting that summarizes a published personal account, including biographical details and direct quotes from the subject. There are no logical fallacies, contradictions, or unsupported extraordinary claims within the text, as all significant details are attributed to Wofford's op-ed.\"\n}\n```"
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article demonstrates a neutral and informative tone, primarily summarizing and quoting an op-ed published by the New York Times from former Pennsylvania senator Harris Wofford. It explicitly cites its source for the claims made (the NYT op-ed), providing strong internal evidence. The claims themselves, while a touching personal story, are plausible, and the language used does not rely on sensationalism or heavily emotional vocabulary from the article's author. The style aligns with standard reporting that summarizes a published personal account, including biographical details and direct quotes from the subject. There are no logical fallacies, contradictions, or unsupported extraordinary claims within the text, as all significant details are attributed to Wofford's op-ed.\"\n}\n```"
+            }
+        ]
+    },
+    {
+        "News title": "Yemeni-Americans shut hundreds of shops in NY City to protest travel ban",
+        "is_fake": false,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article exhibits a neutral and informative tone, consistent with standard news reporting. It describes a specific event (shop closures in protest), provides context (Trump's travel ban), and includes direct quotes from participants and affected individuals. The claims are plausible, and information is attributed to organizers or observed facts. The language is factual and lacks manipulative or overly emotional vocabulary, even when reporting on strong emotions expressed by those involved. The style is typical of a news agency (Reuters) reporting on a current event.\"\n}\n```"
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article exhibits a neutral and informative tone, consistent with standard news reporting. It describes a specific event (shop closures in protest), provides context (Trump's travel ban), and includes direct quotes from participants and affected individuals. The claims are plausible, and information is attributed to organizers or observed facts. The language is factual and lacks manipulative or overly emotional vocabulary, even when reporting on strong emotions expressed by those involved. The style is typical of a news agency (Reuters) reporting on a current event.\"\n}\n```"
+            }
+        ]
+    },
+    {
+        "News title": "Indian police arrest French journalist for filming in Kashmir",
+        "is_fake": false,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "{\"classification\": \"True\", \"explanation\": \"The article demonstrates a neutral and objective tone, characteristic of standard news reporting. It attributes claims to specific sources (named police officials, anonymous senior police official due to protocol, official figures). The claims themselves are plausible, detailing an arrest for visa violation and unauthorized filming in a sensitive region, which is a common occurrence. The article provides relevant background information without resorting to sensationalism or emotional language. The intent is clearly to inform, not to manipulate.\"}"
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "{\"classification\": \"True\", \"explanation\": \"The article demonstrates a neutral and objective tone, characteristic of standard news reporting. It attributes claims to specific sources (named police officials, anonymous senior police official due to protocol, official figures). The claims themselves are plausible, detailing an arrest for visa violation and unauthorized filming in a sensitive region, which is a common occurrence. The article provides relevant background information without resorting to sensationalism or emotional language. The intent is clearly to inform, not to manipulate.\"}"
+            }
+        ]
+    },
+    {
+        "News title": " Mike Pence Indicates That He\u2019ll Soon Be In The Russian Hot Seat",
+        "is_fake": true,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": null,
+                "bot_output": "```json\n{\n  \"classification\": \"Fake\",\n  \"explanation\": \"The article displays a clear intent to manipulate rather than inform. While it cites some verifiable facts (Pence hiring a lawyer, Trump hiring a lawyer, the ongoing Russia probe), it uses these facts as a foundation for highly speculative and accusatory claims about Mike Pence's potential guilt and impending legal troubles. The tone is heavily opinionated, sarcastic, and emotional, using phrases like 'anti-LGBT and anti-woman enough to be the inspiration for the Handmaid s Tale,' 'could be going down with Trump and the rest of the people who are in bed with Russia,' and 'apparent inevitability of appearing under oath.' It presents speculation as 'safe to assume' and makes strong assertions about Pence's knowledge of Michael Flynn's activities and policy changes ('What we do know, though, is that Pence knew from at least March,' 'Yes, there is evidence that policy changed') without providing specific sources or evidence for these crucial claims. The repeated disclaimer 'hiring a lawyer in no way means Pence is guilty' is immediately undermined by the surrounding narrative, which strongly implies guilt through selective historical comparisons and a speculative conclusion. This combination of manipulative tone, logical leaps, and extraordinary claims lacking specific evidence points to an attempt to shape opinion rather than provide objective news.\"\n}\n```"
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": true,
+                "bot_output": "```json\n{\n  \"classification\": \"Fake\",\n  \"explanation\": \"The article displays a clear intent to manipulate rather than inform. While it cites some verifiable facts (Pence hiring a lawyer, Trump hiring a lawyer, the ongoing Russia probe), it uses these facts as a foundation for highly speculative and accusatory claims about Mike Pence's potential guilt and impending legal troubles. The tone is heavily opinionated, sarcastic, and emotional, using phrases like 'anti-LGBT and anti-woman enough to be the inspiration for the Handmaid s Tale,' 'could be going down with Trump and the rest of the people who are in bed with Russia,' and 'apparent inevitability of appearing under oath.' It presents speculation as 'safe to assume' and makes strong assertions about Pence's knowledge of Michael Flynn's activities and policy changes ('What we do know, though, is that Pence knew from at least March,' 'Yes, there is evidence that policy changed') without providing specific sources or evidence for these crucial claims. The repeated disclaimer 'hiring a lawyer in no way means Pence is guilty' is immediately undermined by the surrounding narrative, which strongly implies guilt through selective historical comparisons and a speculative conclusion. This combination of manipulative tone, logical leaps, and extraordinary claims lacking specific evidence points to an attempt to shape opinion rather than provide objective news.\"\n}\n```"
+            }
+        ]
+    },
+    {
+        "News title": " Trump Indicates WH Previously Lied, Second Secret Putin Meeting Was \u2018More Than Small Talk\u2019",
+        "is_fake": true,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": null,
+                "bot_output": "```json\n{\n  \"classification\": \"Fake\",\n  \"explanation\": \"The article uses highly emotional and judgmental language throughout, such as 'threw his spokespeople under the bus,' 'blew this cover to smithereens,' 'Whoops,' and 'Yet again, Trump has chosen Russia and Putin over the American people. Sad.' This manipulative tone, along with the accusatory conclusions presented as fact rather than analysis, indicates an intent to persuade or manipulate rather than simply inform. While it quotes a source (New York Times) and provides background information, the heavily biased framing and explicit emotional appeals detract from its credibility as neutral news reporting.\"\n}\n```"
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": null,
+                "step_evaluation_chatbot": false,
+                "bot_output": "```json\n{\n  \"classification\": \"Fake\",\n  \"explanation\": \"The article uses highly emotional and judgmental language throughout, such as 'threw his spokespeople under the bus,' 'blew this cover to smithereens,' 'Whoops,' and 'Yet again, Trump has chosen Russia and Putin over the American people. Sad.' This manipulative tone, along with the accusatory conclusions presented as fact rather than analysis, indicates an intent to persuade or manipulate rather than simply inform. While it quotes a source (New York Times) and provides background information, the heavily biased framing and explicit emotional appeals detract from its credibility as neutral news reporting.\"\n}\n```"
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 2,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": null,
+                "bot_output": "False\nExplanation: The article presents claims about Trump's actions and motivations regarding Russia as factual assertions, but these remain unverified by the sources cited within the article itself."
+            },
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 3,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": true,
+                "bot_output": "False\nExplanation: The article presents claims about Trump's actions and motivations regarding Russia as factual assertions, but these remain unverified by the sources cited within the article itself."
+            },
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": null,
+                "bot_output": "```json\n{\n  \"classification\": \"Fake\",\n  \"explanation\": \"The article uses highly emotional, biased, and judgmental language throughout, indicating an intent to manipulate rather than simply inform. Phrases like 'you can be sure of one thing: it s just a matter of time until Trump himself contradicts that statement,' 'Trump blew this cover to smithereens,' 'Whoops,' and 'Yet again, Trump has chosen Russia and Putin over the American people. Sad' are editorialized and designed to evoke a strong negative reaction rather than present objective news. While it quotes Trump and provides context, the framing and tone are overtly propagandistic, aiming to discredit rather than report neutrally.\"\n}\n```"
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": null,
+                "step_evaluation_chatbot": false,
+                "bot_output": "```json\n{\n  \"classification\": \"Fake\",\n  \"explanation\": \"The article uses highly emotional, biased, and judgmental language throughout, indicating an intent to manipulate rather than simply inform. Phrases like 'you can be sure of one thing: it s just a matter of time until Trump himself contradicts that statement,' 'Trump blew this cover to smithereens,' 'Whoops,' and 'Yet again, Trump has chosen Russia and Putin over the American people. Sad' are editorialized and designed to evoke a strong negative reaction rather than present objective news. While it quotes Trump and provides context, the framing and tone are overtly propagandistic, aiming to discredit rather than report neutrally.\"\n}\n```"
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 2,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": null,
+                "bot_output": "False\nExplanation: The article's central claim\u2014that Trump contradicted his own statement regarding Russia having intelligence on Biden\u2014is factually inaccurate, as no such subsequent contradiction by Trump is documented in the article's cited timeframe."
+            },
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 3,
+                "step_evaluation_news": null,
+                "step_evaluation_chatbot": false,
+                "bot_output": "False\nExplanation: The article's central claim\u2014that Trump contradicted his own statement regarding Russia having intelligence on Biden\u2014is factually inaccurate, as no such subsequent contradiction by Trump is documented in the article's cited timeframe."
+            },
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 4,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": null,
+                "bot_output": "False\nExplanation: The article claims Trump contradicted an earlier statement about Russian intelligence on Biden, but the content provided does not document any subsequent contradictory statement from Trump."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 5,
+                "step_evaluation_news": null,
+                "step_evaluation_chatbot": false,
+                "bot_output": "False\nExplanation: The article claims Trump contradicted an earlier statement about Russian intelligence on Biden, but the content provided does not document any subsequent contradictory statement from Trump."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 6,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": null,
+                "bot_output": "False\nExplanation: The article's assertion that Trump contradicted himself is not substantiated by any evidence within the content provided."
+            },
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 7,
+                "step_evaluation_news": null,
+                "step_evaluation_chatbot": false,
+                "bot_output": "False\nExplanation: The article's assertion that Trump contradicted himself is not substantiated by any evidence within the content provided."
+            },
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 8,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": null,
+                "bot_output": "False\nExplanation: The provided article does not contain information that demonstrates a contradiction by Trump."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 9,
+                "step_evaluation_news": null,
+                "step_evaluation_chatbot": false,
+                "bot_output": "False\nExplanation: The provided article does not contain information that demonstrates a contradiction by Trump."
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 10,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": null,
+                "bot_output": "Fake\nExplanation: The article's content lacks any verifiable information that establishes a contradiction by Trump."
+            }
+        ]
+    },
+    {
+        "News title": "Pelosi re-elected to House Democratic leadership post",
+        "is_fake": false,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article displays characteristics of standard journalistic reporting. It comes from a reputable news agency (Reuters), maintains a neutral and objective tone, and presents factual information about a political event (leadership election) including names, vote counts, and direct quotes from relevant figures. There are no logical fallacies, emotional language, or extraordinary claims lacking substantiation. The internal logic is sound, describing a challenge to leadership, the outcome, and the reasons behind the challenge, without taking a biased stance.\"\n}\n```"
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article displays characteristics of standard journalistic reporting. It comes from a reputable news agency (Reuters), maintains a neutral and objective tone, and presents factual information about a political event (leadership election) including names, vote counts, and direct quotes from relevant figures. There are no logical fallacies, emotional language, or extraordinary claims lacking substantiation. The internal logic is sound, describing a challenge to leadership, the outcome, and the reasons behind the challenge, without taking a biased stance.\"\n}\n```"
+            }
+        ]
+    },
+    {
+        "News title": " Republicans Block Young Voters From Participating In Ohio Primary",
+        "is_fake": true,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": null,
+                "bot_output": "```json\n{\n  \"classification\": \"Fake\",\n  \"explanation\": \"The article displays a heavily manipulative and partisan tone, clearly attempting to persuade rather than inform neutrally. Phrases like 'Republicans Block Young Voters,' 'revoking the rights,' 'distorting the language,' 'underhanded, backroom attack,' 'most fundamental freedom,' and 'leave it up to the Republicans to try to make distorted arguments and reasoning' are emotionally charged and reveal a strong bias against the Republican Secretary of State and party. While it references specific names and events that might have a factual basis, the presentation is not a neutral news report. It attributes motives ('make his mark,' 'repeated claims he has made it easier to vote... when in fact he continues to find ways to make it harder') and offers a one-sided interpretation of events, rather than objectively presenting both sides of the argument. The concluding paragraph is a direct editorial comment attacking Republicans, which is indicative of propaganda rather than journalism. The intent is clearly to manipulate the reader's opinion, not simply to convey information.\"\n}\n```"
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": null,
+                "step_evaluation_chatbot": false,
+                "bot_output": "```json\n{\n  \"classification\": \"Fake\",\n  \"explanation\": \"The article displays a heavily manipulative and partisan tone, clearly attempting to persuade rather than inform neutrally. Phrases like 'Republicans Block Young Voters,' 'revoking the rights,' 'distorting the language,' 'underhanded, backroom attack,' 'most fundamental freedom,' and 'leave it up to the Republicans to try to make distorted arguments and reasoning' are emotionally charged and reveal a strong bias against the Republican Secretary of State and party. While it references specific names and events that might have a factual basis, the presentation is not a neutral news report. It attributes motives ('make his mark,' 'repeated claims he has made it easier to vote... when in fact he continues to find ways to make it harder') and offers a one-sided interpretation of events, rather than objectively presenting both sides of the argument. The concluding paragraph is a direct editorial comment attacking Republicans, which is indicative of propaganda rather than journalism. The intent is clearly to manipulate the reader's opinion, not simply to convey information.\"\n}\n```"
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 2,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": null,
+                "bot_output": "False\nExplanation: The article's claims, such as Republicans blocking young voters, are factually inaccurate and not supported by verifiable evidence."
+            },
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 3,
+                "step_evaluation_news": false,
+                "step_evaluation_chatbot": true,
+                "bot_output": "False\nExplanation: The article's claims, such as Republicans blocking young voters, are factually inaccurate and not supported by verifiable evidence."
+            }
+        ]
+    },
+    {
+        "News title": "Japan to propose changes to beef import safeguards in talks with U.S.: sources",
+        "is_fake": false,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article exhibits characteristics of standard journalistic reporting. The intent is clearly to inform about an upcoming proposal and its context in U.S.-Japan trade relations. It attributes information to 'two government sources' and 'one source' who have direct knowledge of the matter, which is a common and acceptable practice in reporting on sensitive diplomatic negotiations where official statements may not yet be public. The claims made are plausible within the current geopolitical and trade climate (e.g., Japan trying to mitigate trade friction with the U.S.). The tone is neutral and objective, using factual language without emotional or manipulative vocabulary. It also provides background information, such as the current safeguard measures, previous economic dialogues, and trade deficit figures, further contributing to its credibility as a news report.\"\n}\n```"
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article exhibits characteristics of standard journalistic reporting. The intent is clearly to inform about an upcoming proposal and its context in U.S.-Japan trade relations. It attributes information to 'two government sources' and 'one source' who have direct knowledge of the matter, which is a common and acceptable practice in reporting on sensitive diplomatic negotiations where official statements may not yet be public. The claims made are plausible within the current geopolitical and trade climate (e.g., Japan trying to mitigate trade friction with the U.S.). The tone is neutral and objective, using factual language without emotional or manipulative vocabulary. It also provides background information, such as the current safeguard measures, previous economic dialogues, and trade deficit figures, further contributing to its credibility as a news report.\"\n}\n```"
+            }
+        ]
+    },
+    {
+        "News title": "Vietnamese general says first purchase of U.S. weapons some way off",
+        "is_fake": false,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article exhibits a neutral and objective tone, reporting directly on statements made by a senior Vietnamese military official, Nguyen Chi Vinh. It provides context for the official's remarks, linking them to the recent lifting of the U.S. arms embargo and regional geopolitical dynamics concerning China and the South China Sea. The claims are plausible, noting the complexities of shifting military procurement, such as the high cost of U.S. weapons, Vietnam's existing reliance on Russia, and the need for detailed discussions. The article attributes information to named officials and, where appropriate for sensitive topics, to 'regional security experts,' 'regional military sources,' and 'U.S. officials.' This is consistent with standard journalistic practices, especially from a reputable news agency like Reuters. There are no logical fallacies, contradictions, or sensational language that would suggest an intent to manipulate or misinform.\"\n}\n```"
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article exhibits a neutral and objective tone, reporting directly on statements made by a senior Vietnamese military official, Nguyen Chi Vinh. It provides context for the official's remarks, linking them to the recent lifting of the U.S. arms embargo and regional geopolitical dynamics concerning China and the South China Sea. The claims are plausible, noting the complexities of shifting military procurement, such as the high cost of U.S. weapons, Vietnam's existing reliance on Russia, and the need for detailed discussions. The article attributes information to named officials and, where appropriate for sensitive topics, to 'regional security experts,' 'regional military sources,' and 'U.S. officials.' This is consistent with standard journalistic practices, especially from a reputable news agency like Reuters. There are no logical fallacies, contradictions, or sensational language that would suggest an intent to manipulate or misinform.\"\n}\n```"
+            }
+        ]
+    },
+    {
+        "News title": "Michigan lawmakers push forward $500 mln package for Detroit schools",
+        "is_fake": false,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article demonstrates characteristics of credible journalism. It presents a balanced view by quoting various stakeholders with differing opinions (House Speaker, Governor, teachers' unions, Mayor, state Senator, transition manager). The tone is neutral and objective, avoiding sensational language or emotional appeals. It provides specific details such as financial figures, dates, and names of individuals and legislative bodies involved. The claims made are plausible and consistent with typical political and economic reporting. While specific links to primary sources are not provided, this is standard for a news summary from a reputable wire service like Reuters. There are no logical fallacies, contradictions, or extraordinary claims without attribution, indicating an intent to inform rather than manipulate.\"\n}\n```"
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article demonstrates characteristics of credible journalism. It presents a balanced view by quoting various stakeholders with differing opinions (House Speaker, Governor, teachers' unions, Mayor, state Senator, transition manager). The tone is neutral and objective, avoiding sensational language or emotional appeals. It provides specific details such as financial figures, dates, and names of individuals and legislative bodies involved. The claims made are plausible and consistent with typical political and economic reporting. While specific links to primary sources are not provided, this is standard for a news summary from a reputable wire service like Reuters. There are no logical fallacies, contradictions, or extraordinary claims without attribution, indicating an intent to inform rather than manipulate.\"\n}\n```"
+            }
+        ]
+    },
+    {
+        "News title": " After Pulling NFL-Related Ads, Papa John\u2019s Gets An Unlikely Sponsor Of Their Own: Nazis",
+        "is_fake": true,
+        "Steps": [
+            {
+                "chatbot_name": "Gemini",
+                "step_num": 0,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": null,
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article presents a coherent narrative based on specific, widely reported events regarding Papa John's CEO and the NFL protests. While the headline 'Gets An Unlikely Sponsor Of Their Own: Nazis' is provocative, the article immediately clarifies that this 'sponsorship' refers to an ultra-right-wing website (The Daily Stormer) posting an article praising the CEO, effectively appropriating the brand, rather than an official partnership. This clarification mitigates the initial shocking claim. The article details specific facts (e.g., $70 million loss, CEO's prior comments on Obamacare, parallels to New Balance and Wendy's incidents, mention of 'negro fatigue' in the Stormer article) that align with publicly known information around this topic. Although the tone is highly opinionated, sarcastic, and critical of Papa John's pizza quality and the CEO's actions and wealth, it does not present logical fallacies or internal contradictions in its reporting of the events. The heavy bias and strong opinions position it more as a commentary or opinion piece rooted in factual occurrences rather than a fabricated news story.\"\n}\n```"
+            },
+            {
+                "chatbot_name": "Deepseek",
+                "step_num": 1,
+                "step_evaluation_news": true,
+                "step_evaluation_chatbot": true,
+                "bot_output": "```json\n{\n  \"classification\": \"True\",\n  \"explanation\": \"The article presents a coherent narrative based on specific, widely reported events regarding Papa John's CEO and the NFL protests. While the headline 'Gets An Unlikely Sponsor Of Their Own: Nazis' is provocative, the article immediately clarifies that this 'sponsorship' refers to an ultra-right-wing website (The Daily Stormer) posting an article praising the CEO, effectively appropriating the brand, rather than an official partnership. This clarification mitigates the initial shocking claim. The article details specific facts (e.g., $70 million loss, CEO's prior comments on Obamacare, parallels to New Balance and Wendy's incidents, mention of 'negro fatigue' in the Stormer article) that align with publicly known information around this topic. Although the tone is highly opinionated, sarcastic, and critical of Papa John's pizza quality and the CEO's actions and wealth, it does not present logical fallacies or internal contradictions in its reporting of the events. The heavy bias and strong opinions position it more as a commentary or opinion piece rooted in factual occurrences rather than a fabricated news story.\"\n}\n```"
             }
         ]
     }

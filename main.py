@@ -52,7 +52,7 @@ def run_one(dataset: int = 1) -> bool:
         print(f"[Skip] Error: {msg}")
         return False
 
-def main(runs: int = 50, dataset: int = 1): # Number of runs to perform
+def main(runs: int = 5, dataset: int = 1): # Number of runs to perform
     print(f"Starting with Dataset {dataset}\n")
     successes = 0
     attempts = 0
